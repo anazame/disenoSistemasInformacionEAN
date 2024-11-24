@@ -1,8 +1,8 @@
 /*
 
-TemplateMo 553 Xtra Blog
+Template-ean Blog
 
-https://templatemo.com/tm-553-xtra-blog
+basado en: https://templatemo.com/tm-553-xtra-blog
 
 */
 
@@ -11,7 +11,7 @@ html { overflow-x: hidden; }
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 19px;
     line-height: 2em;
     overflow-x: hidden;
@@ -28,7 +28,7 @@ hr {
 .form-control::placeholder { color: #999; }
 
 .tm-header {
-    background-color: #0CC;
+    background-color: #3bac53;
     color: white;
     
     position: fixed;
@@ -36,7 +36,7 @@ hr {
     left: 0;
     bottom: 0;
     z-index: 100;
-    width: 400px;
+    width: 450px;
     overflow-y: visible;     
 }
 
@@ -56,7 +56,7 @@ hr {
 
 .tm-site-header {
     margin-top: 50px;
-    margin-bottom: 115px;
+    margin-bottom: 50px;
 }
 
 .tm-site-logo {
@@ -69,7 +69,7 @@ hr {
     justify-content: center;
 }
 
-.tm-site-logo i { color: #0CC; }
+.tm-site-logo i { color: #3bac53; }
 
 .tm-main {
     margin-left: 400px;
@@ -98,14 +98,14 @@ hr {
     max-width: 300px;    
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 30px;
 }
 
 .tm-nav-item:hover .tm-nav-link,
 .tm-nav-item.active .tm-nav-link
  {
-    color: #0CC;
+    color: #3bac53;
     background-color: white;
     text-decoration: none;
 }
@@ -178,11 +178,11 @@ ul {
     width: 60px;
     height: 60px;
     border: none;
-    background-color: #0CC;
+    background-color: #3bac53;
     transition: all 0.3s ease;
 }
 
-.tm-search-button:hover { background-color: #09b6b6; }
+.tm-search-button:hover { background-color: #3bac53; }
 
 .tm-search-icon {
     color: white;
@@ -299,7 +299,7 @@ ul {
     cursor: not-allowed;
 }
 
-.tm-external-link { color: #0CC; }
+.tm-external-link { color: #3bac53; }
 .tm-external-link:hover { color: #09b6b6; }
 
 .tm-paging-wrapper {
@@ -319,7 +319,7 @@ ul {
 .tm-copyright { text-align: right; }
 
 /* Single Post page */
-hr.tm-hr-primary { border-top: 5px solid #0CC; }
+hr.tm-hr-primary { border-top: 5px solid #3bac53; }
 
 video {
     width: 100%;
@@ -340,7 +340,7 @@ video {
 
 .form-control {
     height: 45px;
-    border-color: #0CC;
+    border-color: #3bac53;
     border-radius: 0;
 }
 
