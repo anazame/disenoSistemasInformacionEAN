@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template-ean-blog.css" rel="stylesheet">
+    <link href="css/lato-font.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+
+    <div class="row tm-row-custom">
+        <div class="col-12">
+            <div class="d-flex justify-content-end">
+                <img src="img/logo-horizontal.png" alt="Image" class="img-fluid img-logo-custom">
+            </div>     
+        </div>    
+    </div>  
+
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class=" mx-auto tm-site-logo"><i class="fas fa-microchip fa-2x"></i></div>            
+                <h3 class="text-center">Blog diseño de sistemas de información </h3>
+                <h6 class="text-center lato-thin-italic">Ana María Zapata - 2024</h6>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item active"><a href="dbms.html" class="tm-nav-link">
+                        <i class="fas fa-database"></i>
+                        Motores de base de datos
+                    </a></li>
+                    <li class="tm-nav-item"><a href="bd-relacional.html" class="tm-nav-link">
+                        <i class="fas fa-table"></i>
+                        Bases de datos relacionales 
+                    </a></li>
+                    <li class="tm-nav-item"><a href="db-nosql.html" class="tm-nav-link">
+                        <i class="fas fa-archive"></i>
+                        Bases de datos no relacionales 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="normalizacion.html" class="tm-nav-link" >
+                        <i class="fas fa-tasks"></i>
+                        Normalización
+                    </a></li>
+                    <li class="tm-nav-item"><a href="estrategias-seguridad.html" class="tm-nav-link">
+                        <i class="fas fa-user-shield"></i>
+                        Estrategias de seguridad
+                    </a></li>
+                    <li class="tm-nav-item"><a href="noticias.html" class="tm-nav-link">
+                        <i class="fas fa-rss-square"></i>
+                        Últimas noticias
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="tm-mb-20 tm-color-primary tm-blog-title ">Motores de base de datos </h1>    
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/motor-bases-de-datos.png" alt="Image" class="img-fluid tm-mb-20">
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4" id="dbms-post">
+                            <h2 class=" tm-color-primary tm-post-title">¿Qué es un motor de bases de datos?</h2>
+                            <p class="tm-mb-40 tm-p-publish-custom lato-regular-italic">Noviembre 24, 2024 publicado por Ana María Zapata</p>
+
+                            <p>El uso de herramientas tecnológicas para la gestión de datos estructurados y no estructurados 
+                               es de vieja data, pero es en la actualidad donde se ha vuelto más popular y necesario. 
+                               Los motores de bases de datos son herramientas que permiten la gestión integral de información y 
+                               han demostrado alta efectividad a la hora de almacenar, recuperar y manipular grandes cantidades de datos. 
+                             </p>  
+                             <p> En esta entrada, te explicaremos qué es un motor de bases de datos, sus características, tipología, 
+                                arquitectura y algunos otros detalles relevantes.</p>
+                            
+
+                            <h4 class="tm-mb-20 tm-color-primary" id="definicion-dbms">Definición </h4>
+                            <p>
+                                Un motor de base de datos (DBMS Engine, por sus siglas en inglés) es el software encargado de 
+                                almacenar, recuperar y gestionar datos en una base de datos. Proporciona una interfaz para interactuar 
+                                con los datos a través de lenguajes de consulta, como SQL, y asegura la consistencia, integridad, 
+                                disponibilidad y seguridad de la información.</p>
+                            <p>
+                                Esencialmente, actúa como intermediario entre las aplicaciones y los datos almacenados,
+                                garantizando también la eficiencia en la gestión de información crítica para 
+                                diversas aplicaciones empresariales y tecnológicas.
+                            </p>
+
+                            <h4 class="tm-mb-20 tm-mt-30 tm-color-primary" id="caracteristicas-dbms">Características</h4>
+                            <p>Las características de un motor de bases de datos incluyen: </p>
+                            <ol class="tm-mb-30">
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Soporte de transacciones:</span> Garantiza que las operaciones sean atómicas y seguras.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Acceso concurrente:</span> Permite que múltiples usuarios accedan simultáneamente a la base de datos.</p></li>    
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad:</span> Soporta crecimiento de datos y usuarios.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Integridad de datos:</span> Asegura la exactitud y consistencia de los datos.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Alta disponibilidad:</span> Minimiza el tiempo de inactividad.</p></li>    
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Soporte de lenguajes de consulta:</span> Como SQL o APIs especializadas.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Gestión de seguridad:</span> Implementa permisos y autenticación para proteger los datos.</p></li>
+                            </ol>
+
+                            <h4 class="tm-mb-20 tm-color-primary" id="clasificacion-dbms">Clasificación</h4>
+                            <p>Los motores de base de datos se pueden clasificar según diferentes criterios:</p>
+
+                            <ol class="tm-mb-30">
+                                <li class="tm-color-primary">Por modelo de datos
+                                    <ul>
+                                        <li><p><span class="lato-bold">Relacionales:</span> Organizan datos en tablas relacionadas mediante claves (ej. MySQL, PostgreSQL).</p></li>
+                                        <li><p><span class="lato-bold">No relacionales (NoSQL):</span> Diseñados para estructuras de datos flexibles como documentos, grafos o columnas (ej. MongoDB, Cassandra).</p></li>        
+                                    </ul>
+                                </li>
+                                <li class="tm-color-primary">Por naturaleza de acceso
+                                    <ul>
+                                        <li><p><span class="lato-bold">OLTP (Procesamiento de Transacciones en Línea):</span> Optimizados para operaciones transaccionales rápidas (ej. Oracle DB).</p></li>
+                                        <li><p><span class="lato-bold">OLAP (Procesamiento Analítico en Línea):</span> Diseñados para análisis de datos a gran escala (ej. Amazon Redshift).</p></li>
+                                    </ul>
+                                </li>
+                                <li class="tm-color-primary">Por el modelo de implementación
+                                    <ul>
+                                        <li><p><span class="lato-bold">Locales:</span> Corren en servidores dedicados.</p></li>
+                                        <li><p><span class="lato-bold">Basados en la nube:</span> Accesibles como servicios en la nube (ej. Firebase, Amazon Aurora).</p></li>
+                                    </ul>
+                                </li> 
+                                <li class="tm-color-primary">Por licencia
+                                    <ul>
+                                        <li><p><span class="lato-bold">Comerciales:</span> Software propietario (ej. Microsoft SQL Server).</p></li>
+                                        <li><p><span class="lato-bold">De código abierto:</span> Software libre (ej. MariaDB).</p></li>    
+                                    </ul>
+
+                                </li> 
+                            </ol>
+
+                            <h4 class="tm-mb-20 tm-color-primary" id="tipologia-dbms">Tipología</h4>
+                            <p>Algunos tipos comunes de motores de base de datos incluyen:</p>
+                            <ul class="tm-mb-30">
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Relacionales (RDBMS):</span>  
+                                    Usan tablas para estructurar datos y definen relaciones entre estas tablas mediante claves primarias y foráneas.
+                                    Algunos ejemplos son: MySQL, PostgreSQL, SQL Server.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Documentales:</span>
+                                    Almacenan datos en formatos como JSON o BSON. Por ejemplo: MongoDB, Couchbase.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Basados en grafos:</span>
+                                    Modelan relaciones complejas en grafos. Están optimizados para representar y analizar relaciones 
+                                    complejas entre entidades. Algunos jemplos de este tipo son: Neo4j, Amazon Neptune.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Claves-valor:</span>
+                                    Guardan pares clave-valor. Almacenan datos directamente en RAM para acceso rápido, siendo ideales para aplicaciones 
+                                    con altas demandas de rendimiento. Algunos ejemplos son: Redis, DynamoDB.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Columnares:</span>
+                                    Almacenan datos por columnas, lo que mejora el rendimiento en consultas analíticas. 
+                                    Ejemplos de este tipo son: Apache Cassandra, HBase.
+                                </p></li>
+                             </ul>   
+
+                                <h4 class=" tm-mb-20 tm-color-primary" id="arquitectura-dbms">Arquitectura</h4>
+                                <p>Un motor de base de datos suele estar constituido por los siguientes componentes:</p>
+                                <ol>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">
+                                        Interfaz de usuario o API:</span>
+                                        Permite a los usuarios interactuar con la base de datos.
+                                    </p></li> 
+
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Procesador de consultas:</span>
+                                        Traducen consultas (como SQL) a operaciones entendibles por el sistema.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Gestor de almacenamiento:</span>
+                                    Controla cómo y dónde se almacenan los datos físicamente.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Gestión de transacciones:</span>
+                                        Asegura que las operaciones se realicen de forma consistente y cumpliendo con 
+                                        ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad).
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Gestión de memoria:</span> 
+                                        Optimiza el acceso a datos en memoria y en disco.
+                                    </p></li>
+                                </ol>
+
+                                <p>La siguiente gráfica ilustra la arquitectura de un motor de base de datos genérico o agnóstico:
+                                </p>
+                                
+                                <img src="img/arquitecturabd.png" alt="Image" class="img-fluid tm-mb-20" />
+
+                                <p>Según la entrada publicada por autor AKEIL RS (recuperado de la web en: "Curso de bases de datos \ 
+                                    arquitectura de un DBMS, accesible <a href="https://educasistemas.wordpress.com/2016/08/02/arquitectura-de-un-dbms/" target="_blank">aquí</a> );  
+                                    un "DBMS" se puede dividir en tres niveles:
+                                </p>
+
+                                <ol class="tm-mb-30">
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Nivel externo:</span>
+                                        Es el nivel del «SABD» (Sistema de ambiente de Bases de datos) más cercano al usuario por lo que se le conoce 
+                                        también como la vista del usuario. 
+                                        Este nivel define cómo el usuario ve a los datos almacenados por el «SABD».
+                                    </p></li>
+                                
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Nivel conceptual:</span>
+                                        Es el nivel que define la base de datos tal como es y cómo la ve el DBA (DatabaseAdministrator). 
+                                        Este nivel define las relaciones entre los datos.
+                                    </p></li>
+
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Nivel interno: </span>
+                                        Es el nivel que tiene que ver con el almacenamiento físico de los datos. 
+                                        Define cómo se guardan los datos en el medio físico.
+                                    </p></li>
+                                </ol> 
+
+                                <hr class="tm-hr-primary tm-mb-20">
+                                <h4 class="tm-mb-20 tm-color-primary" id="ventajas-dbms">Ventajas</h4>
+                                <p>Algunas de las diversas ventajas de utilizar un motor de base de datos incluyen:</p>
+                                <ul class="tm-mb-30">
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Eficiencia en la gestión de datos:</span>
+                                     Facilita la manipulación y organización de grandes volúmenes de datos.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Automatización:</span> 
+                                        Maneja tareas complejas, como la recuperación de datos en caso de fallos.</p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Interoperabilidad:</span>
+                                        Compatible con diversos sistemas y aplicaciones.</p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Optimización de consultas:</span>
+                                        Reduce el tiempo y los recursos necesarios para acceder a los datos.</p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad:</span>
+                                        Adecuado para aplicaciones pequeñas y grandes.</p></li>
+                                </ul>
+                                
+                                    <h4 class=" tm-mb-20 tm-color-primary" id="limitaciones-dmbs">Limitaciones</h4>
+                                    <p>Aunque la implementación de un motor de base de datos ofrece varias ventajas, también tiene algunas limitaciones 
+                                        entre las que se destacan:
+                                    </p>
+
+                                    <ul class="tm-mb-30">
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Costo:</span>
+                                        Los motores comerciales pueden ser costosos.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Curva de aprendizaje:</span>
+                                        Configuración y mantenimiento pueden requerir experiencia técnica.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Compatibilidad:</span>
+                                        Algunos motores no son compatibles con ciertos lenguajes o plataformas.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Rendimiento:</span>
+                                        En bases de datos grandes, mal diseño o consultas no optimizadas pueden reducir el rendimiento.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Complejidad:</span>
+                                        Los sistemas distribuidos requieren un diseño más complejo (ej. bases de datos en clúster).
+                                        </p></li>
+                                    </ul>    
+                                    <hr class="tm-hr-primary tm-mb-20">
+ 
+                                <h4 class="tm-color-primary">Fuentes consultadas</h4>
+                                <p><span class="tm-color-primary lato-thin-italic tm-xs-font">(incluye recursos de recuperación de imágenes)</span></p>
+
+                                <ul style="list-style-type: none;" class="tm-category-list">
+                                    <li><a class="tm-color-primary"  href="https://tecnobits.com/que-es-el-motor-de-bases-de-datos/" target="_blank"> Tecnobits - ¿Qué es el motor de base de datos?</a></li>
+                                    <li><a class="tm-color-primary"  href="https://techlib.net/techedu/motor-de-base-de-datos/" target="_blank">Techedu - Motor de base de datos</a></li>
+                                    <li><a class="tm-color-primary"  href="https://keepcoding.io/blog/que-son-los-motores-de-bases-de-datos/" target="_blank">KeepCoding - ¿Qué son los motores de bases de datos?</a></li>
+                                    <li><a class="tm-color-primary"  href="https://programacionpro.com/tipos-de-motores-de-bases-de-datos-una-guia-completa/" target="_blank">Porgramación Pro - Tipos de motores de bases de datos : Una guía completa</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.mediummultimedia.com/apps/cual-es-el-motor-de-base-de-datos/" target="_blank">Medium Multimedia - ¿Cúal es el motor de base de datos?</a></li>
+                                    <li><a class="tm-color-primary"  href="https://educasistemas.wordpress.com/2016/08/02/arquitectura-de-un-dbms/" target="_blank">Educa Sistemas - Arquitectura de un DBMS</a></li>
+                                </ul>
+                            <hr class="tm-hr-primary tm-mb-20">
+                            <span class="d-block text-right"><a class="tm-color-primary" href="#"><span class="fas fa-step-backward tm-color-primary pr-3"></span>Rebobinar entrada</a></span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="mb-4 tm-post-title tm-color-primary">Secciones de interés</h2>
+                        <ul class="tm-mb-75 pl-5 tm-category-list">
+                            <li><a href="index.html#home-contenido" class="tm-color-primary"><span class="fas fa-home tm-color-primary pr-3"></span>Volver al inicio</a></li>
+                            <li><a href="#arquitectura-dbms" class="tm-color-primary">Arquitectura DBMS</a></li>
+                            <li><a href="#clasificacion-dbms" class="tm-color-primary">Clasificación</a></li>
+                            <li><a href="#caracteristicas-dbms" class="tm-color-primary">Características</a></li>
+                            <li><a href="#tipologia-dbms" class="tm-color-primary">Tipología</a></li>
+                            <li><a href="#ventajas-dbms" class="tm-color-primary">Ventajas</a></li>
+                            <li><a href="#limitaciones-dmbs" class="tm-color-primary">Limitaciones</a></li>
+                        </ul>
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-02.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Duis mollis diam nec ex viverra scelerisque a sit</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-05.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Integer quis lectus eget justo ullamcorper ullamcorper</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-06.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Nam lobortis nunc sed faucibus commodo</figcaption>
+                            </figure>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-4 col-4 tm-color-gray">
+                </div>
+                <div class="col-sm-12 col-md-8 col-12 tm-color-gray tm-copyright">
+                    Desarrollado por Ana María Zapata basado en la plantilla (Copyright 2020) Xtra Blog Company Co. Ltd. 
+                    <a rel="nofollow" target="_blank" href="https://templatemo.com" class="tm-external-link" >TemplateMo</a>
+                    
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>

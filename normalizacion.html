@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template-ean-blog.css" rel="stylesheet">
+    <link href="css/lato-font.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+    <div class="row tm-row-custom">
+        <div class="col-12">
+            <div class="d-flex justify-content-end">
+                <img src="img/logo-horizontal.png" alt="Image" class="img-fluid img-logo-custom">
+            </div>     
+        </div>    
+    </div>  
+
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class=" mx-auto tm-site-logo"><i class="fas fa-microchip fa-2x"></i></div>            
+                <h3 class="text-center">Blog diseño de sistemas de información </h3>
+                <h6 class="text-center lato-thin-italic">Ana María Zapata - 2024</h6>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item"><a href="dbms.html" class="tm-nav-link">
+                        <i class="fas fa-database"></i>
+                        Motores de base de datos
+                    </a></li>
+                    <li class="tm-nav-item"><a href="bd-relacional.html" class="tm-nav-link">
+                        <i class="fas fa-table"></i>
+                        Bases de datos relacionales 
+                    </a></li>
+                    <li class="tm-nav-item"><a href="db-nosql.html" class="tm-nav-link">
+                        <i class="fas fa-archive"></i>
+                        Bases de datos no relacionales 
+                    </a></li>
+                    
+                    <li class="tm-nav-item active"><a href="normalizacion.html" class="tm-nav-link" >
+                        <i class="fas fa-tasks"></i>
+                        Normalización
+                    </a></li>
+                    <li class="tm-nav-item"><a href="estrategias-seguridad.html" class="tm-nav-link">
+                        <i class="fas fa-user-shield"></i>
+                        Estrategias de seguridad
+                    </a></li>
+                    <li class="tm-nav-item"><a href="noticias.html" class="tm-nav-link">
+                        <i class="fas fa-rss-square"></i>
+                        Últimas noticias
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="tm-mb-20 tm-color-primary tm-blog-title ">Normalización</h1>            
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/normalizacion.jpeg" alt="Normalización" class="img-fluid tm-mb-20">
+                    
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-primary tm-post-title">Normalización de bases de datos y formas normales</h2>
+                            <p class="tm-mb-40 tm-p-publish-custom lato-regular-italic">Noviembre 24, 2024 publicado por Ana María Zapata</p>
+                            <p>
+                                El diseño de bases de datos relacionales evolucionó rápidamente y  se encuentra en un alto nivel de estandarización en 
+                                la actualidad. En esta cuarta entrada de la serie de bases de datos, se abordará el 
+                                tema de la normalización y las formas normales con la intención de dar respuesta a dos preguntas 
+                                académicas claves: 
+                                 </p>
+                                 <ul>
+                                    <li class="tm-color-primary"><p>¿qué es la normalización de bases de datos?</p></li> 
+                                    <li class="tm-color-primary"><p>¿Qué formas normales existen?</p>
+                                 </ul>
+                            <p>
+                                Iniciaremos con la definición del proceso de normalización para después abordar las formas normales en detalle.
+                            </p>
+
+                                 Normalización de Bases de Datos y Formas Normales
+La normalización es un proceso de diseño de bases de datos que organiza los datos para reducir redundancia y mejorar la integridad. A través de este proceso, las tablas de una base de datos se dividen en subconjuntos más pequeños con relaciones definidas, asegurando que cada tabla almacene un solo tema o entidad.
+
+Definición
+La normalización implica estructurar una base de datos conforme a un conjunto de reglas (formas normales) que garantizan:
+
+La eliminación de redundancia de datos.
+La minimización de anomalías al insertar, actualizar o eliminar datos.
+Proceso de Normalización y Formas Normales
+Primera Forma Normal (1NF)
+Requisitos:
+
+Cada columna contiene un único valor atómico.
+Cada fila es única.
+Ejemplo: Una tabla que combina múltiples valores en una celda (por ejemplo, varios cursos asociados a un estudiante) se separa en filas individuales para cumplir con 1NF.
+
+Segunda Forma Normal (2NF)
+Requisitos:
+
+Cumple con 1NF.
+Toda columna no clave depende completamente de la clave primaria.
+Proceso: Si existe dependencia parcial (algunas columnas dependen de una parte de la clave compuesta), se dividen en tablas separadas.
+
+Tercera Forma Normal (3NF)
+Requisitos:
+
+Cumple con 2NF.
+No hay dependencias transitivas (columnas no clave no dependen de otras columnas no clave).
+Se eliminan estas dependencias creando tablas adicionales para almacenar datos dependientes.
+
+Forma Normal de Boyce-Codd (BCNF)
+Requisitos:
+
+Cumple con 3NF.
+Cada determinante (columna de la cual depende otra columna) es una clave candidata.
+Cuarta Forma Normal (4NF)
+Requisitos:
+
+Cumple con BCNF.
+No hay dependencias multivaluadas (una fila no debería contener más de un conjunto de valores multivaluados para una clave primaria).
+Quinta Forma Normal (5NF)
+Requisitos:
+
+Cumple con 4NF.
+Las tablas se descomponen únicamente cuando es necesario preservar dependencias de unión.
+Forma Normal Sexta (6NF)
+Aunque no está estandarizada, aborda problemas adicionales relacionados con bases de datos temporales y especificaciones avanzadas.
+
+Ventajas de la Normalización
+Reducción de Redundancia: Los datos duplicados se eliminan.
+Mejora en Consistencia: Los datos se actualizan en un único lugar, minimizando errores.
+Ahorro de Espacio: Menor duplicación reduce el uso de almacenamiento.
+Consulta Más Eficiente: Las estructuras más simples son más rápidas para procesar.
+Facilidad de Mantenimiento: Las relaciones entre datos están mejor definidas, lo que simplifica el mantenimiento.
+Limitaciones de la Normalización
+Complejidad: Puede requerir más tablas y consultas complejas.
+Rendimiento: La descomposición en múltiples tablas puede aumentar el tiempo de respuesta para consultas complejas.
+Sobrecarga Inicial: Requiere planeación y diseño cuidadoso al inicio.
+
+                            <p>
+                                Duis pretium efficitur nunc. Mauris vehicula nibh nisi. Curabitur gravida neque
+                                dignissim, aliquet nulla sed, condimentum nulla. Pellentesque id venenatis
+                                quam, id cursus velit. Fusce semper tortor ac metus iaculis varius. Praesent
+                                aliquam ex vel lectus ornare tristique. Nunc et eros quis enim feugiat tincidunt
+                                et vitae dui.
+                            </p>
+                            <span class="d-block text-right tm-color-primary">Creative . Design . Business</span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="mb-4 tm-post-title tm-color-primary">Categories</h2>
+                        <ul class="tm-mb-75 pl-5 tm-category-list">
+                            <li><a href="#" class="tm-color-primary">Visual Designs</a></li>
+                            <li><a href="#" class="tm-color-primary">Travel Events</a></li>
+                            <li><a href="#" class="tm-color-primary">Web Development</a></li>
+                            <li><a href="#" class="tm-color-primary">Video and Audio</a></li>
+                            <li><a href="#" class="tm-color-primary">Etiam auctor ac arcu</a></li>
+                            <li><a href="#" class="tm-color-primary">Sed im justo diam</a></li>
+                        </ul>
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-02.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Duis mollis diam nec ex viverra scelerisque a sit</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-05.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Integer quis lectus eget justo ullamcorper ullamcorper</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-06.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Nam lobortis nunc sed faucibus commodo</figcaption>
+                            </figure>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>

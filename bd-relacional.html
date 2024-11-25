@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template-ean-blog.css" rel="stylesheet">
+    <link href="css/lato-font.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+
+    <div class="row tm-row-custom">
+        <div class="col-12">
+            <div class="d-flex justify-content-end">
+                <img src="img/logo-horizontal.png" alt="Image" class="img-fluid img-logo-custom">
+            </div>     
+        </div>    
+    </div>  
+
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class=" mx-auto tm-site-logo"><i class="fas fa-microchip fa-2x"></i></div>            
+                <h3 class="text-center">Blog diseño de sistemas de información </h3>
+                <h6 class="text-center lato-thin-italic">Ana María Zapata - 2024</h6>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item"><a href="dbms.html" class="tm-nav-link">
+                        <i class="fas fa-database"></i>
+                        Motores de base de datos
+                    </a></li>
+                    <li class="tm-nav-item active"><a href="bd-relacional.html" class="tm-nav-link">
+                        <i class="fas fa-table"></i>
+                        Bases de datos relacionales 
+                    </a></li>
+                    <li class="tm-nav-item"><a href="db-nosql.html" class="tm-nav-link">
+                        <i class="fas fa-archive"></i>
+                        Bases de datos no relacionales 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="normalizacion.html" class="tm-nav-link" >
+                        <i class="fas fa-tasks"></i>
+                        Normalización
+                    </a></li>
+                    <li class="tm-nav-item"><a href="estrategias-seguridad.html" class="tm-nav-link">
+                        <i class="fas fa-user-shield"></i>
+                        Estrategias de seguridad
+                    </a></li>
+                    <li class="tm-nav-item"><a href="noticias.html" class="tm-nav-link">
+                        <i class="fas fa-rss-square"></i>
+                        Últimas noticias
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="tm-mb-20 tm-color-primary tm-blog-title ">Bases de datos relacionales (SQL)</h1>    
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/bases-datos-relacional.png" alt="Image" class="img-fluid tm-mb-20">
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4" id="dbms-post">
+                            <h2 class=" tm-color-primary tm-post-title"> Bases de datos relacionales, características y actualidad</h2>
+                            <p class="tm-mb-40 tm-p-publish-custom lato-regular-italic">Noviembre 24, 2024 publicado por Ana María Zapata</p>
+
+                            
+                            <p>La abstracción de objetos del mundo real a través del concepto de entidades y sus relaciones 
+                                está ampliamente difundido en y adoptado por el mundo de la informática.
+                            </p>    
+                            <p>
+                                En esta segunda entrada de la serie de bases de datos, vamos a profundizar en las bases de datos relacionales
+                                con la intención de responder a tres preguntas académicas clave:
+                            </p> 
+                               
+                                <ul>
+                                    <li class="tm-color-primary"><p>¿Qué características tiene una base de datos relacional?</p></li>
+                                    <li class="tm-color-primary"><p>¿Cuáles son los motores de bases de datos relacionales licenciados más utilizados en el desarrollo de aplicaciones?</p></li>
+                                    <li class="tm-color-primary"><p>¿Cuáles son los motores de bases de datos relacionales Open Source?</p></li>
+                                </ul>
+                            <p>    
+                                Iniciaremos con la definición técnica de los motores de bases de datos relacionales, 
+                                para luego profundizar en sus características y finalmente, describir los licenciados y de uso libre 
+                                más utilizados.
+                            </p>
+
+
+                            <h4 class="tm-mb-20 tm-color-primary" id="definicion-rdbms">Definición </h4>
+                            <p class="tm-mb-20"> 
+                                Un motor de base de datos relacional (RDMBS en inglés) es un sistema de software diseñado para administrar bases de datos organizadas en un modelo relacional,
+                                 donde los datos se estructuran en tablas con filas y columnas, y las relaciones entre estas tablas están 
+                                 claramente definidas. Los RDBMS permiten ejecutar consultas SQL (Structured Query Language) para insertar, 
+                                 actualizar, eliminar y recuperar datos. Además, garantizan características como integridad referencial, 
+                                 atomicidad, consistencia, aislamiento y durabilidad (ACID), lo que asegura transacciones confiables y seguras.    
+                            </p>
+
+                            <h4 class="tm-mb-20 tm-mt-30 tm-color-primary" id="caracteristicas-rdbms">Características</h4>
+                            
+                            <ol class="tm-mb-30">
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Modelo Relacional:</span> Estructura basada en tablas con relaciones bien definidas.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Compatibilidad SQL:</span> Soporte para consultas estándar y optimización avanzada.</p></li>    
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">ACID:</span> Garantizan transacciones consistentes y duraderas.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Multiplataforma:</span> Compatibilidad con sistemas operativos como Windows, Linux y macOS.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad:</span> Soporte para operaciones con grandes volúmenes de datos.</p></li>    
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Integridad Referencial:</span> Mantenimiento automático de relaciones entre tablas.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Arquitectura Cliente-Servidor:</span> Los clientes interactúan con un servidor que maneja todas las operaciones.</p></li>
+                            </ol>
+
+                            <h4 class="tm-mb-20 tm-color-primary" id="propietarios-rdbms">Motores de bases de datos relacionales licenciados más utilizados</h4>
+                            <p>Este apartado responde a la pregunta 
+                                "¿Cuáles son los motores de bases de datos relacionales licenciados más utilizados en 
+                                el desarrollo de aplicaciones?", a continuación la especificación correspondiente.
+                            </p>
+
+                            <h5 class="tm-color-primary">Oracle Database</h5>
+
+                            <p>Es una solución de base de datos relacional de código cerrado, ampliamente utilizada 
+                            en aplicaciones empresariales de sectores como el financiero y de telecomunicaciones.
+                            </p>
+                            
+                            <p><span class="tm-color-primary">Características </span></p>
+                            <p>Escalabilidad extrema, soporte para OLTP y OLAP, seguridad robusta, y capacidades avanzadas como 
+                                partición y compresión de datos.
+                            </p>    
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            <p>
+                                Oracle Database presenta una arquitectura cliente-servidor con opciones para almacenamiento distribuido. 
+                                Usa mecanismos avanzados como Oracle RAC para alta disponibilidad y se basa en dos componentes principales: 
+                                instancia de base de datos y estructura física de la base de datos. 
+                            </p>
+                            <p>A continuación, una explicación desagregada de los componentes:</p>
+
+                            <ul>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Instancia: </span>
+                                    Incluye la Memoria Global del Sistema (SGA) y procesos en segundo plano como PMON, SMON, 
+                                    DBWn, y LGWR.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Estructuras Físicas: </span>
+                                    Archivos de datos, archivos de control, y logs de recuperación en disco.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">System Global Area (SGA): </span>Gestiona áreas de memoria compartida para optimizar el rendimiento, como la caché de buffers de datos y la caché del pool compartido.</p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Ejecución SQL: </span>Los comandos son gestionados en la PGA (Área Global de Programa) antes de interactuar con la base de datos.</p></li>
+                            </ul> 
+                            
+                            <p>El diagrama arquitectónico para el resumen expuesto anteriormente se muestra a continuación:</p>
+
+                            <img src="img/Oracle-Database-Architecture-database-instance.png" alt="image" class="img-fluid tm-mb-40" />                             
+                             
+
+                            
+                            <h5 class="tm-color-primary"> Microsoft SQL Server</h5>
+                            <p>También es utilizada para aplicaciones empresariales en diversos sectores, 
+                                sin embargo; está especializada para el desarrollo de aplicaciones de negocio 
+                                y de datos en entornos Windows.
+                            </p>
+
+                            <p><span class="tm-color-primary">Características</span></p>
+                            <p>
+                                Fuerte integración con el ecosistema de Microsoft, herramientas como SSRS y SSIS 
+                                para informes y ETL.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            
+                            <p>
+                                SQL Server utiliza una arquitectura cliente-servidor con soporte integrado para 
+                                análisis y gestión de datos,incluyendo capacidades de procesamiento de datos en 
+                                memoria (in-memory OLTP), sus componentes se describen a continuación:
+                            </p>
+
+                            <ul>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Memoria: </span>
+                                    El caché de buffers y el planificador de consultas son críticos para la optimización.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Procesos: </span>
+                                    El motor incluye el almacenamiento en disco y el motor de consultas para interactuar con los datos.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Base de datos maestra: </span>
+                                    Contiene la configuración global del servidor y metadatos.
+                                </p></li>
+                            </ul>
+                            
+                            <p>El diagrama arquitectónico para el resumen expuesto anteriormente se especifica en la ilustración que sigue.</p>
+                            <img src="img/sql_server_architecture.png", alt="imagen" class="img-fluid tm-mb-40"/>
+
+                            <h5 class="tm-color-primary">IBM DB2</h5>
+
+                            <p>Es una base de datos relacional licenciada de uso común en sectores como las finanzas, 
+                                seguros y cadenas de suministro.
+                            </p>
+
+                            <p><span class="tm-color-primary">Características</span></p>
+                            <p>Presenta herramientas para inteligencia empresarial, analítica integrada y 
+                                soporte para múltiples modelos de datos.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            <p>Utiliza igualmente una arquitectura cliente-servidor que en este caso está 
+                                optimizada para analítica de grandes volúmenes de datos.
+                                Las aplicaciones cliente se conectan al servidor de base de datos para realizar 
+                                operaciones sobre los datos. Los principales componentes del servidor DB2 incluyen:
+                            </p>    
+                            <ul>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Clientes y agentes coordinadores: </span>
+                                    Los clientes envían solicitudes SQL al agente coordinador en el servidor. 
+                                    Este agente maneja la planificación y ejecución de consultas, así como la 
+                                    comunicación con otros subagentes.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Buffer Pools: </span>
+                                    Espacios en memoria que almacenan datos temporalmente para optimizar 
+                                    el acceso y reducir operaciones en disco.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Prefetchers y Page Cleaners: </span>
+                                    Los "Prefetchers" cargan páginas desde el disco a los buffer pools de forma anticipada y 
+                                    "Page Cleaners" escriben páginas modificadas desde el buffer pool al disco.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Subagentes paralelos: </span>
+                                    Permiten el procesamiento distribuido en sistemas con múltiples núcleos o particiones, 
+                                    optimizando el rendimiento.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Gestor de Bloqueos: </span>
+                                    Asegura la consistencia de los datos mediante un sistema robusto de bloqueo para 
+                                    transacciones concurrentes.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Gestión de Logs:</span>
+                                    Los registros de transacciones son fundamentales para la recuperación en caso de fallos.
+                                </p></li>
+                            </ul>   
+ 
+                            <p>El diagrama de arquitectura para la solución IBM DB2 se especifica en la ilustración 
+                                más abajo.</p>
+                            
+                            <img src="img/IBM_db2_architecture.gif", alt="imagen" class="img-fluid tm-mb-40"/>    
+
+                            <h4 class="tm-mb-20 tm-mt-30 tm-color-primary" id="opensource-rdbms">
+                                Motores de bases de datos relacionales de código abierto más utilizados</h4>
+
+                            <p>Este apartado responde a la pregunta "¿Cuáles son los motores de bases de datos 
+                                relacionales Open Source?", a continuación la especificación correspondiente.
+                            </p>
+
+                            <h5 class="tm-color-primary">PostgreSQL</h5>
+
+                            <p>Es una solución de uso común en aplicaciones de alta concurrencia y 
+                                sistemas que requieren complejas consultas analíticas​</p>
+
+                            <p><span class="tm-color-primary">Características</span></p>    
+                            <p>Extensibilidad, soporte nativo para JSON, transacciones ACID completas, 
+                                y réplica lógica.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            
+                            <p>Utiliza una arquitectura Basada en MVCC (Multi-Version Concurrency Control) y 
+                                escritura anticipada (WAL). Al ser un sistema extensible, 
+                                favorece su robustez con una división en varios subsistemas:
+                            </p>    
+                            <ul>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa de Cliente/Interfaz: </span>
+                                    Usa protocolos como TCP/IP para conexiones cliente-servidor y 
+                                    permite personalización mediante extensiones.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Gestor de Consultas: </span>
+                                    Incluye el parser, reescritor de consultas, y optimizador. Este subsistema 
+                                    se encarga de generar planes de ejecución óptimos basados en índices y estadísticas.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Ejecutor y Controlador de Transacciones: </span>
+                                    Maneja consultas SQL, MVCC (Multiversion Concurrency Control), y el sistema de 
+                                    bloqueo.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa de Almacenamiento: </span>
+                                    Gestiona almacenamiento físico, recuperación y replicación.
+                                </p></li>
+
+                            </ul>    
+                            
+                            <p>En la ilustración que sigue se muestra la arquitectura de PostgreSQL.</p>
+                                
+                            <img src="img/postgreSQL.png", alt="imagen" class="img-fluid tm-mb-40"/>    
+                            
+                            <p>También puede consultarse este recurso en línea para obtener más información sobre 
+                                la solución PostgreSQL: 
+                            </p>
+                             
+                            <p class="tm-mb-30">
+                            <a href="https://www.postgresql.org/about/" target="_blank" class="tm-color-primary">Acerca de PostgreSQL</a>
+                            </p>
+                            
+                            <p>Para profundizar en relación con la arquitectura de PostgreSQL 
+                                este video en Youtube es de gran utilidad.</p>    
+
+                            <div class="col-12 tm-mb-40">
+                                <hr class="tm-hr-primary tm-mb-30">
+                                    <embed src="https://www.youtube-nocookie.com/embed/cWyVfATZ7H4" 
+                                    width="100%" height="auto">							  
+                            </div>
+                            
+                            <h5 class="tm-color-primary">MySQL</h5>
+                            <p>Es una solución de software libre muy utilizada en sitios web dinámicos y 
+                                aplicaciones LAMP (Linux, Apache, MySQL, PHP).
+                            </p>
+
+                            <p><span class="tm-color-primary">Características</span></p>  
+                            <p>
+                                Rendimiento rápido en operaciones básicas, replicación integrada y fácil configuración.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            <p>
+                                Presenta una arquitectura tipo Cliente-servidor con soporte para múltiples motores de 
+                                almacenamiento como InnoDB y MyISAM. Esta es modular y cuenta con las siguientes 
+                                capas principales:
+                            </p>    
+
+                            <ul>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa de Cliente/Conectores: </span>
+                                    Los clientes se conectan al servidor MySQL mediante protocolos como TCP/IP o sockets.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa del Servidor SQL: </span>
+                                    Gestiona las conexiones, autenticación, y validación de consultas.
+                                    Esta capa contiene componentes como el optimizador de consultas y el planificador 
+                                    de ejecución.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa de Almacenamiento: </span>
+                                    Implementa un modelo de motores de almacenamiento "pluggable".
+                                    Motores como InnoDB, MyISAM, y MEMORY manejan datos físicamente en el disco o en memoria.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capas Físicas: </span>
+                                    Maneja los archivos del sistema, tablas y logs.
+                                </p></li>
+                            </ul>    
+
+                            <p>La arquitectura permite flexibilidad mediante motores especializados para diferentes 
+                            necesidades, como InnoDB para transacciones ACID o MEMORY para consultas rápidas 
+                            en memoria.
+                            </p>
+                                
+                            <p>En la ilustración a continuación, se muestra la arquitectura de MySQL.</p>
+                                
+                            <img src="img/MySQLArchitecture.png", alt="imagen" class="img-fluid tm-mb-40"/>  
+
+                             
+                            <h5 class="tm-color-primary">MariaDB</h5>
+
+                            <p>
+                               Es una solución comúnmente utilizada como sustituto de MySQL en proyectos open source.
+                            </p>
+
+                            <p><span class="tm-color-primary">Características</span></p>  
+
+                            <p>
+                                Compatibilidad con MySQL, pero optimizado para rendimiento avanzado y extensiones específicas.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+
+                            <p> Su arquitectura es un "Fork" de MySQL con mejoras en motores de almacenamiento como XtraDB.
+                                Por tratarse de una derivación de MySQL; MariaDB comparte muchas similitudes, 
+                                pero introduce características específicas para mejorar el rendimiento y la seguridad:
+                            </p>
+
+                            <ul>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa de Conexión: </span>
+                                    Similar a MySQL, pero con mejoras en autenticación y cifrado.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Capa SQL y Optimizador: </span>
+                                    Incluye algoritmos avanzados para la optimización de consultas.
+                                    Permite optimizaciones como columnas virtuales y almacenamiento distribuido.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Motores de Almacenamiento Avanzados: </span>
+                                    Motores exclusivos como Aria y Spider para análisis de datos y partición horizontal.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="lato-bold">Seguridad Mejorada: </span> 
+                                    Incluye cifrado en reposo y roles de usuario más avanzados.
+                                </p></li>
+                            </ul>        
+                            
+                            <p>En la ilustración a continuación, se muestra la arquitectura de MariaDB.</p>
+                                
+                            <img src="img/mariaDB_architecture.png", alt="imagen" class="img-fluid tm-mb-40"/>  
+
+                            <hr class="tm-hr-primary tm-mb-30">
+
+                            <h4 class="tm-mb-20 tm-color-primary" id="comparativa-rdbms">Comparativa General: RDBMS Licenciados vs Open Source</h4>
+
+                            <p>Se puede inferir, basados en la información disponible en línea; que los motores de bases de 
+                            datos relacionales <span class="tm-color-primary">licenciados</span> ofrecen soporte 
+                            empresarial, mayor estabilidad y herramientas avanzadas de análisis y administración, 
+                            a menudo a un alto costo. Por otro lado; los motores de bases de datos relacionales 
+                            <span class="tm-color-primary">Open Source</span> ofrecen flexibilidad y bajo costo, pero requieren conocimientos avanzados 
+                            para configuración y mantenimiento adecuados. </p> 
+                                
+                            <hr class="tm-hr-primary tm-mb-30">
+
+                                <h4 class="tm-mb-20 tm-color-primary" id="ventajas-rdbms">Ventajas</h4>
+                                <p>Algunas de las diversas ventajas de utilizar un motor de base de datos relacional incluyen:</p>
+                                <ul class="tm-mb-30">
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Estructura bien definida: </span>
+                                        La organización en tablas con filas y columnas facilita el modelado, 
+                                        comprensión y acceso a los datos. 
+                                        Esto es ideal para aplicaciones empresariales con datos claramente 
+                                        estructurados​.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Estándar SQL: </span>
+                                        Al soportar SQL como lenguaje estándar, permite a los usuarios realizar 
+                                        consultas y manipular datos con facilidad. SQL es ampliamente conocido y 
+                                        utilizado, lo que facilita la formación y el soporte técnico​.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Integridad de los datos: </span>
+                                        Mediante la integridad referencial y las restricciones (como claves primarias 
+                                        y foráneas), garantiza que los datos permanezcan consistentes y fiables​.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Transacciones ACID: </span>
+                                        La implementación de propiedades ACID (Atomicidad, Consistencia, Aislamiento 
+                                        y Durabilidad) asegura que las transacciones se realicen de manera confiable, 
+                                        incluso en escenarios de fallos​.
+                                    </p></li>
+
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Seguridad robusta: </span>
+                                        Los sistemas relacionales suelen incluir controles avanzados de permisos y 
+                                        autenticación, lo que protege los datos contra accesos no autorizados​.
+                                    </p></li>
+
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad vertical:</span>
+                                        Muchos RDBMS permiten manejar grandes volúmenes de datos al mejorar la 
+                                        capacidad del hardware (escalabilidad vertical), lo cual es común en 
+                                        entornos empresariales tradicionales​.
+                                    </p></li>
+                                </ul>
+                                
+                                    <h4 class=" tm-mb-20 tm-color-primary" id="limitaciones-rdmbs">Limitaciones</h4>
+                                    <p>Aunque la implementación de un motor de base de datos relacional ofrece varias 
+                                        ventajas, también tiene algunas limitaciones entre las que se destacan:
+                                    </p>
+
+                                    <ul class="tm-mb-30">
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Rigidez en el esquema:</span>
+                                            El esquema fijo puede dificultar cambios cuando los datos evolucionan de manera 
+                                            no estructurada. Esto las hace menos adecuadas para manejar datos semiestructurados 
+                                            o no estructurados, como en aplicaciones modernas basadas en IoT o Big Data​.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad horizontal limitada:</span>
+                                            Aunque algunos sistemas como CockroachDB están diseñados para distribución, 
+                                            la mayoría de los RDBMS tradicionales no son adecuados para escalabilidad 
+                                            horizontal o distribución masiva de datos​.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Requerimientos de hardware:</span>
+                                            Las bases de datos relacionales demandan recursos significativos para 
+                                            operaciones intensivas y para manejar grandes conjuntos de datos. 
+                                            Esto puede elevar los costos en implementaciones a gran escala​.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Complejidad en consultas avanzadas:</span>
+                                            Aunque SQL es poderoso, ejecutar consultas complejas en bases de datos muy 
+                                            grandes puede ser ineficiente y requerir optimización adicional 
+                                            (por ejemplo, índices o desnormalización)​.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Costo:</span>
+                                            Los RDBMS licenciados, como Oracle o SQL Server, tienen altos costos 
+                                            asociados con licencias, soporte técnico y mantenimiento. 
+                                            Esto puede ser un desafío para pequeñas empresas o startups​.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Falta de flexibilidad para datos no relacionales:</span>
+                                            El diseño rígido de tablas las hace menos eficaces para datos jerárquicos 
+                                            o anidados, donde las bases de datos NoSQL, como MongoDB, suelen destacar​.
+                                        </p></li>
+
+                                    </ul>    
+                                
+                                <hr class="tm-hr-primary tm-mb-20">
+                                <h4 class="tm-color-primary">Fuentes consultadas</h4>
+                                <p><span class="tm-mb-20 tm-color-primary lato-thin-italic tm-xs-font">(incluye recursos de recuperación de imágenes)</span></p>
+
+                                <ul style="list-style-type: none;" class="tm-category-list">
+                                    <li><a class="tm-color-primary"  href="https://universidadeuropea.com/blog/bases-datos-big-data/" target="_blank"> Unversidad Europea - De las bases de datos relacionales al Big Data</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/" target="_blank">Oracle Tutorial - Aquitectura Oracle Database</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.guru99.com/es/sql-server-architecture.html" target="_blank">Guru99 - Fiona Marrón, 2024 - SQL Server arquitecnología (explicada) </a></li>
+                                    <li><a class="tm-color-primary"  href="https://medium.com/agedb/postgresql-architecture-59d6242d91d8" target="_blank">Medium - Bitnine Global, 2024 - Arquitectura PostgreSQL</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.geeksforgeeks.org/architecture-of-mysql/" target="_blank">Geeks for Geeks, 2023 - Arquitectura de MySQL</a></li>
+                                    <li><a class="tm-color-primary"  href="https://mariadb.com/kb/en/understanding-mariadb-architecture/" target="_blank">MariaDB - Comprendiendo la Arquitectura de MariaDB</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.slideshare.net/slideshow/the-complete-mariadb-server-tutorial/66984410#33" target="_blank">SlideShare -  Colin Charles,  Percona inc., 2016 - Tutorial completo de MariaDB</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.oracle.com/webfolder/technetwork/tutorials/architecture-diagrams/19/pdf/db-19c-architecture.pdf" target="_blank">Oracle - Arquitectura técnica de Oracle Database 19c </a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems" target="_blank">Digital Ocean - Mark Drake et. al., 2022  - Comparativo de motores de bases de datos relacionales sqlite vs MySQL vs PostgreSQL</a></li>
+                                    <li><a class="tm-color-primary"  href="https://opensource.com/article/19/1/open-source-databases" target="_blank">OpenSource - Sam Bocetta, 2019  - Comparativo de 3 bases de datos Open Source: PostgreSQL, MariaDB, y SQLite</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.openlogic.com/blog/guide-open-source-relational-databases" target="_blank">OpenLogic, 2021, - Guía para bases de datos relacionales Open Source</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.red-gate.com/simple-talk/databases/mysql/mysql-vs-postgresql-which-open-source-database-is-right-for-you/" target="_blank">RedGate - Aisha Bukar, 2024, - MySQL vs PostgreSQL : ¿Cuál base de datos Open Source es adecuada para ti?</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.codemotion.com/magazine/devops/5-best-open-source-databases-in-2024/" target="_blank">CodeMotion - Alexandr Kirpichny, 2024, - Las 5 mejores bases de datos Open Source en 2024</a></li>
+
+                                </ul>
+                            <hr class="tm-hr-primary tm-mb-20">
+                            <span class="d-block text-right"><a class="tm-color-primary" href="#"><span class="fas fa-step-backward tm-color-primary pr-3"></span>Rebobinar entrada</a></span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="mb-4 tm-post-title tm-color-primary">Secciones de interés</h2>
+                        <ul class="tm-mb-75 pl-5 tm-category-list">
+                            <li><a href="index.html#home-contenido" class="tm-color-primary"><span class="fas fa-home tm-color-primary pr-3"></span>Volver al inicio</a></li>
+                            <li><a href="#definicion-rdbms" class="tm-color-primary">Definición</a></li>
+                            <li><a href="#caracteristicas-rdbms" class="tm-color-primary">Características</a></li>
+                            <li><a href="#propietarios-rdbms" class="tm-color-primary">BD licenciadas</a></li>
+                            <li><a href="#opensource-rdbms" class="tm-color-primary">DB Open Source</a></li>
+                            <li><a href="#ventajas-rdbms" class="tm-color-primary">Ventajas</a></li>
+                            <li><a href="#limitaciones-rdmbs" class="tm-color-primary">Limitaciones</a></li>
+                        </ul>
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-02.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Duis mollis diam nec ex viverra scelerisque a sit</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-05.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Integer quis lectus eget justo ullamcorper ullamcorper</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-06.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Nam lobortis nunc sed faucibus commodo</figcaption>
+                            </figure>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-4 col-4 tm-color-gray">
+                </div>
+                <div class="col-sm-12 col-md-8 col-12 tm-color-gray tm-copyright">
+                    Desarrollado por Ana María Zapata basado en la plantilla (Copyright 2020) Xtra Blog Company Co. Ltd. 
+                    <a rel="nofollow" target="_blank" href="https://templatemo.com" class="tm-external-link" >TemplateMo</a>
+                    
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>

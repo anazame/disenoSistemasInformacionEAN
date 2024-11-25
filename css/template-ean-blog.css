@@ -12,25 +12,30 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 2em;
     overflow-x: hidden;
 }
 
 p, span { color: #999; }
+
 hr { 
     border-top-color: #CCC; 
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .form-control::-webkit-input-placeholder { color: #999; }  
 .form-control:-ms-input-placeholder { color: #999; }  
 .form-control::placeholder { color: #999; }
 
+.tm-p-publish-custom {
+    font-size: 0.8rem;
+}
+
 .tm-header {
     background-color: #3bac53;
     color: white;
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -40,6 +45,7 @@ hr {
     overflow-y: visible;     
 }
 
+
 .tm-header-wrapper {
     overflow-y: scroll;
     scrollbar-width: none;
@@ -47,6 +53,7 @@ hr {
     padding: 30px;
     width: 100%;
     height: 100%; 
+    box-shadow: 0.0em 0.0em 0.5em rgba(4, 4, 4, 0.6);
 }
 
 .tm-header-wrapper::-webkit-scrollbar {
@@ -73,7 +80,7 @@ hr {
 
 .tm-main {
     margin-left: 400px;
-    padding: 80px 100px 25px;
+    padding: 40px 100px 25px;
 }
 
 .tm-post { max-width: 470px; }
@@ -87,19 +94,19 @@ hr {
 
 .tm-nav-item {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .tm-nav-link {
     color: white;
     background-color: transparent;
-    height: 75px;
+    height: 60px;
     width: 100%;
     max-width: 300px;    
     display: flex;
     align-items: center;
-    font-size: 1.3rem;
-    padding: 30px;
+    font-size: 1.0rem;
+    padding: 20px;
 }
 
 .tm-nav-item:hover .tm-nav-link,
@@ -110,6 +117,12 @@ hr {
     text-decoration: none;
 }
 
+.tm-row-custom {
+    
+    background: #000000;
+    box-shadow: 0.0em 0.0em 0.5em rgba(4, 4, 4, 0.6);
+    z-index:110;
+}
 .tm-nav ul { position: relative; }
 
 .tm-nav-item:hover:after,
@@ -117,9 +130,8 @@ hr {
     content: '';
     width: 100%;
     max-width: 300px;    
-    height: 75px;
+    height: 60px;
     display: block;
-    border: 1px solid white;
     margin-left: 10px;
     margin-top: -65px;
     position: absolute;
@@ -226,6 +238,15 @@ ul {
 	transform: translate3d(0,0,0);
 }
 
+.img-logo-custom{
+    max-width:250px; 
+    max-height: 58px;
+    padding: 10 10 10 10;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
 .tm-post { margin-bottom: 75px; }
 
 .tm-new-badge {
@@ -238,6 +259,11 @@ ul {
 
 .tm-post-title {
     font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+.tm-blog-title {
+    font-size: 2.0rem;
     transition: all 0.3s ease;
 }
 
@@ -274,6 +300,7 @@ ul {
     display: inline-block;
     margin-right: 10px;
 }
+
 
 .tm-paging-nav ul li:last-child { margin-right: 0; }
 
@@ -316,7 +343,7 @@ ul {
     padding-right: 15px;
 }
 
-.tm-copyright { text-align: right; }
+.tm-copyright { text-align: right; font-size: 0.5rem;}
 
 /* Single Post page */
 hr.tm-hr-primary { border-top: 5px solid #3bac53; }
@@ -357,10 +384,16 @@ figcaption { line-height: 1.4; }
     margin-right: 0;
 }
 
+.tm-xs-font {
+    font-size: 0.8rem;
+}
+
 .tm-pt-20 { padding-top: 20px; }
 .tm-pt-30 { padding-top: 30px; }
 .tm-pt-45 { padding-top: 45px; }
 .tm-pt-60 { padding-top: 60px; }
+.tm-mb-20 { margin-bottom: 20px; }
+.tm-mb-30 { margin-bottom: 30px; }
 .tm-mb-40 { margin-bottom: 40px; }
 .tm-mb-45 { margin-bottom: 45px; }
 .tm-mb-55 { margin-bottom: 55px; }
@@ -370,6 +403,7 @@ figcaption { line-height: 1.4; }
 .tm-mb-80 { margin-bottom: 80px; }
 .tm-mb-120 { margin-bottom: 120px; }
 .tm-mt-40 { margin-top: 40px; }
+.tm-mt-30 { margin-top: 30px; }
 .tm-mt-100 { margin-top: 100px; }
 .tm-mr-20 { margin-right: 20px; }
 .tm-color-primary, span.tm-color-primary { color: #099; }
@@ -475,7 +509,7 @@ a:hover figcaption { color: #056767; }
         position: fixed;
         left: 0;
         top: 0;
-        background-color: rgba(56, 204, 204, 0.75);
+        background-color: rgb(59 172 83);
         color: white;
         padding: 10px 15px;
         transition: all 0.3s ease;
@@ -487,7 +521,7 @@ a:hover figcaption { color: #056767; }
 
     .tm-main {
         margin-left: 0;
-        padding: 50px 40px;
+        padding: 30px 30px;
         width: 100%;
     }
 
@@ -520,7 +554,7 @@ a:hover figcaption { color: #056767; }
     }
 
     .tm-search-form { justify-content: flex-start; }
-    .tm-main { padding: 60px 10px; }
+    .tm-main { padding: 20px 10px; }
 
     .tm-prev-next-wrapper,
     .tm-paging-wrapper {
@@ -533,7 +567,7 @@ a:hover figcaption { color: #056767; }
         justify-content: flex-start;
     }
 
-    .tm-copyright { text-align: left; }
+    .tm-copyright { text-align: left; font-size: 0.5rem;}
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {

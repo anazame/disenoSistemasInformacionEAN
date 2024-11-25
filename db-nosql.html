@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template-ean-blog.css" rel="stylesheet">
+    <link href="css/lato-font.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<!--
+    
+template-ean-blog
+
+basado en https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+    <div class="row tm-row-custom">
+        <div class="col-12">
+            <div class="d-flex justify-content-end">
+                <img src="img/logo-horizontal.png" alt="Image" class="img-fluid img-logo-custom">
+            </div>     
+        </div>    
+    </div>  
+
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class=" mx-auto tm-site-logo"><i class="fas fa-microchip fa-2x"></i></div>            
+                <h3 class="text-center">Blog diseño de sistemas de información </h3>
+                <h6 class="text-center lato-thin-italic">Ana María Zapata - 2024</h6>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item"><a href="dbms.html" class="tm-nav-link">
+                        <i class="fas fa-database"></i>
+                        Motores de base de datos
+                    </a></li>
+                    <li class="tm-nav-item"><a href="bd-relacional.html" class="tm-nav-link">
+                        <i class="fas fa-table"></i>
+                        Bases de datos relacionales 
+                    </a></li>
+                    <li class="tm-nav-item active"><a href="db-nosql.html" class="tm-nav-link">
+                        <i class="fas fa-archive"></i>
+                        Bases de datos no relacionales 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="normalizacion.html" class="tm-nav-link" >
+                        <i class="fas fa-tasks"></i>
+                        Normalización
+                    </a></li>
+                    <li class="tm-nav-item"><a href="estrategias-seguridad.html" class="tm-nav-link">
+                        <i class="fas fa-user-shield"></i>
+                        Estrategias de seguridad
+                    </a></li>
+                    <li class="tm-nav-item"><a href="noticias.html" class="tm-nav-link">
+                        <i class="fas fa-rss-square"></i>
+                        Últimas noticias
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="tm-mb-20 tm-color-primary tm-blog-title ">Bases de datos no relacionales (NoSQL)</h1>    
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/NoSQL_databases.jpg" alt="Image" class="img-fluid tm-mb-20">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4" id="dbms-post">
+                            <h2 class=" tm-color-primary tm-post-title">Bases de datos no relacionales, características y actualidad</h2>
+                            <p class="tm-mb-40 tm-p-publish-custom lato-regular-italic">Noviembre 24, 2024 publicado por Ana María Zapata</p>
+
+                            <p>
+                                Ante la creciente producción de grandes vólumenes de datos (Big Data) no estructurados ( por ejemplo: 
+                                publicaciones en redes sociales, chats, imágenes satelitales, datos de sensores de IoT, correos electrónicos y 
+                                presentaciones) y semi-estructurados (por ejemplo: metadatos de clasificación en archivos de imagen, archivos delimitados) y el auge de la inteligencia artificial se han requerido nuevas aproximaciones de 
+                                solución para la gestión y análisis de información.
+                            </p>    
+                            <p>
+                                En esta tercera entrada de la serie de bases de datos, vamos a introducirnos en el complejo mundo de las 
+                                bases de datos no relacionales (NoSQL) y sus características, así como su actualidad, esto con el fin de responder 
+                                a dos preguntas académicas clave:
+                            </p> 
+                               
+                                <ul>
+                                    <li class="tm-color-primary"><p>¿Qué es una base de datos no relacional?</p></li>
+                                    <li class="tm-color-primary"><p>¿Cuáles son las bases de datos no relacionales que se manejan en la actualidad?</p></li>
+                                </ul>
+                            <p>    
+                                Iniciaremos con la definición técnica de los motores de bases de datos no relacionales, 
+                                para luego profundizar en sus características y finalmente, describir los licenciados y de uso libre 
+                                más utilizados.
+                            </p>
+
+                            
+                            <h4 class="tm-mb-20 tm-color-primary" id="definicion-nosql">Definición </h4>
+                            <p class="tm-mb-20"> 
+                                Las bases de datos NoSQL (Not Only SQL) son sistemas de gestión de datos diseñados 
+                                para manejar grandes volúmenes de datos estructurados, semi-estructurados y no 
+                                estructurados, de forma escalable y eficiente. A diferencia de las bases de datos 
+                                relacionales (RDBMS), no se basan en esquemas rígidos y relaciones predefinidas, 
+                                sino que emplean diversos modelos de datos como documentos, clave-valor,
+                                grafos o columnas anchas, según las necesidades de la aplicación 
+                                (esta definición responde directamente a la pregunta "¿Qué es una base de datos no 
+                                relacional?").
+                            </p>
+
+                            <h4 class="tm-mb-20 tm-mt-30 tm-color-primary" id="caracteristicas-nosql">Características</h4>
+                            
+                            <p class="tm-mb-20">Una muy importante característica de las bases de datos NoSQL es también una gran 
+                                diferencia en comparación con las bases de datos relacionales; esta consiste en que las bases de 
+                                datos NoSQL generalmente no cumplen con las propiedades ACID porque están diseñadas para priorizar 
+                                escalabilidad y disponibilidad, características críticas en aplicaciones distribuidas y de alta 
+                                demanda. En lugar de ACID, muchas bases de datos NoSQL adoptan el modelo BASE, que se centra en 
+                                principios diferentes para gestionar la consistencia en entornos distribuidos. 
+                            </p>
+
+                            <h5 class="tm-mb-20 tm-color-primary">Diferencias entre ACID y BASE</h5>
+                            <p>
+                                Existen marcadas diferencias entre los principios ACID y BASE, que se pueden resumir de la 
+                                siguiente manera:
+                            </p>
+                                
+                            <p><span class="tm-color-primary">ACID (Atomicity, Consistency, Isolation, Durability)</span></p>
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Atomicidad: </span>
+                                    Las transacciones son indivisibles; se completan completamente o no se realizan en absoluto.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Consistencia:</span>
+                                    Las transacciones siempre llevan la base de datos de un estado válido a otro.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Aislamiento:</span>
+                                    Las transacciones concurrentes no interfieren entre sí.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Durabilidad:</span>
+                                    Los cambios realizados por una transacción confirmada son permanentes, incluso frente a fallos.
+                                </p></li>
+                            </ol> 
+ 
+                            <p>
+                                Las bases de datos relacionales (SQL) adoptan este modelo para garantizar la confiabilidad y 
+                                precisión de los datos, pero esto puede limitar la escalabilidad en entornos distribuidos.
+                            </p>
+ 
+                            <p><span class="tm-color-primary">BASE (Basically Available, Soft state, Eventually consistent)</span></p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Disponibilidad Básica (Basically Available): </span>
+                                    El sistema garantiza la disponibilidad incluso en presencia de fallos parciales.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Estado Suave (Soft State): </span>
+                                    El estado del sistema puede cambiar con el tiempo, incluso sin nuevas entradas, 
+                                    debido a la replicación y sincronización.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Consistencia Eventual (Eventually Consistent): </span>
+                                    El sistema asegura que, con el tiempo, todos los nodos llegarán a un estado consistente, 
+                                    pero no necesariamente de inmediato.
+                                </p></li>
+                            </ol>   
+
+                            <p>
+                                El modelo BASE permite sacrificar la consistencia fuerte de los datos en favor de la escalabilidad 
+                                y disponibilidad.
+                            </p>
+ 
+                            <h5 class="tm-mb-20 tm-color-primary"> Razones por las que NoSQL opta por BASE</h5>
+                            
+                            <p>
+                                Las razones por las que NoSQL opta por el modelo BASE en lugar de ACID son:
+                            </p>
+
+                            <p><span class="tm-color-primary">
+                                Teorema CAP (Consistencia, Disponibilidad, Tolerancia a Particiones)
+                            </span></p>
+
+                            <p>En sistemas distribuidos, es imposible garantizar simultáneamente consistencia, disponibilidad y 
+                            tolerancia a particiones. Las bases de datos NoSQL priorizan disponibilidad y tolerancia a particiones, 
+                            dejando la consistencia como eventual. Ejemplo: Un sistema puede continuar operando durante una partición 
+                            de red, pero puede tardar un tiempo en sincronizar completamente los datos entre nodos.
+                            </p>
+
+                            <p><span class="tm-color-primary">Esquemas flexibles y datos distribuidos</span></p>
+
+                            <p>
+                                NoSQL está diseñado para manejar datos no estructurados y distribuidos en múltiples nodos. Asegurar 
+                                la consistencia fuerte (como en ACID) requeriría bloqueos o coordinación intensa entre nodos, lo 
+                                cual impactaría la velocidad y escalabilidad.
+                            </p>
+
+                            <p><span class="tm-color-primary">Casos de uso específicos</span></p>
+
+                            <p>Aplicaciones como redes sociales, IoT, y análisis de big data pueden tolerar inconsistencias 
+                                temporales a cambio de alta disponibilidad y rendimiento.
+                            </p>
+
+                            <p>La imagen a continuación presenta la comparación entre ACID y BASE:</p>
+
+                            <img src="img/ACIDvsBASE.png" class="img-fluid tm-mb-40" alt="ACID vs BASE">
+
+                            <h5 class="tm-mb-20 tm-color-primary">Ejemplo Práctico</h5>
+                            <p>
+                                En una base NoSQL como <span class="lato-bold">Cassandra</span>, cuando un nodo falla o está 
+                                desconectado, los datos escritos pueden replicarse más tarde (consistencia eventual). 
+                                Esto asegura disponibilidad continua, pero un cliente puede recibir respuestas ligeramente 
+                                desactualizadas hasta que todos los nodos estén sincronizados.
+                            </p>
+
+                            <p>Otras características importantes de las bases de datos NoSQL incluyen:</p>
+
+                            <ol class="tm-mb-30">
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Flexibilidad en el esquema: </span> 
+                                    Permiten manejar datos sin estructuras fijas, adaptándose a cambios rápidos en los requisitos.</p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad horizontal: </span> 
+                                    Diseñadas para distribuir datos en múltiples servidores, añadiendo nodos para aumentar capacidad.
+                                </p></li>    
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Baja latencia y alto rendimiento:</span> 
+                                    Ideales para aplicaciones que requieren rápidas operaciones de lectura y escritura.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Distribución geográfica:</span> 
+                                    Permiten replicar datos en diferentes ubicaciones para disponibilidad global.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Soporte para datos no estructurados:</span> 
+                                    Capaces de manejar JSON, XML, blobs binarios, entre otros.</p></li>    
+                            </ol>
+
+                            <h4 class="tm-mb-30 tm-color-primary">Tipología</h4>
+                            <p>Las bases de datos NoSQL se clasifican en cinco categorías principales:</p>
+                            <ol class="tm-mb-30">
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Clave-valor: </span>
+                                    Datos almacenados como pares clave-valor (e.g., Redis, DynamoDB).
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Documentos: </span>
+                                    Basados en formatos como JSON o BSON (e.g., MongoDB, CouchDB).
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Grafos: </span>
+                                    Optimizados para analizar relaciones entre nodos (e.g., Neo4j).
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Columnas anchas: </span>
+                                    Organizan datos por columnas en lugar de filas (e.g., Cassandra, HBase).
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Almacenamiento en memoria: </span>
+                                    Para accesos ultrarrápidos al mantener datos en RAM (e.g., Redis, Memcached)
+                                </p></li>
+                            </ol>
+
+
+                            <h4 class="tm-color-primary tm-mb-30" id="populares-nosql">Motores NoSQL populares </h4>
+                            <p>Existen en la actualidad una variedad de productos propietario (licenciados) y de código abierto
+                                que se utilizan en la industria para la implementación de bases de datos NoSQL, a continuación se 
+                                describen algunos bien conocidos en la industria (este apartado responde a la pregunta "¿Cuáles son las bases de datos no relacionales 
+                                que se manejan en la actualidad?").
+                            </p>
+                            
+                            <h5 class="tm-color-primary tm-mb-20" id="opensource-nosql">Motores Open Source</h5>
+
+                            <p>Entre los motores de código abierto más populares de diferentes tipologías tenemos:</p>
+
+                            <p><span class="tm-color-primary">MongoDB</span></p> 
+                            <p>
+                                Es un motor de bases de datos NoSQL orientado a documentos, ideal para aplicaciones web escalables. 
+                                Basado en JSON (específicamente se encuentra especializado para el manejo del formato BSON que es
+                                una derivación binaria de JSON), ofrece flexibilidad en esquemas y consultas avanzadas.
+                            </p>
+                            <p>
+                                Es una herramienta muy utilizada en el análisis en tiempo real y sistemas de contenido.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura </span></p>
+                            <p>
+                                La arquitectura de MongoDB está diseñada para alta disponibilidad, escalabilidad horizontal y 
+                                flexibilidad en el modelado de datos. Presenta una configuración distribuida, con réplicas y 
+                                particionamiento horizontal. Sus componentes Principales son:
+                            </p>
+                            
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Servidores de datos (mongod): </span>
+                                    Son los nodos donde los datos reales se almacenan, incluyen funcionalidades para lectura/escritura y gestión de datos,
+                                    además; pueden configurarse como parte de un conjunto de réplicas (Replica Set) o clústeres fragmentados (Sharded Clusters).
+                                </p></li>
+
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Replica Sets: </span>
+                                    Grupos de nodos que proporcionan alta disponibilidad y redundancia de datos, 
+                                    contienen un nodo primario para las operaciones de escritura y Nodos secundarios que replican datos del primario y 
+                                    pueden manejar lecturas en ciertos casos. Opcionalmente, tienen un árbitro para romper empates en elecciones.
+                                </p></li>
+
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Sharded Clusters: </span>
+                                    Usados para distribuir datos en varios servidores (shards), permitiendo manejar grandes volúmenes de datos y altas tasas de consulta.
+                                    Se componen de Shards (almacenan datos distribuidos), Config servers (Mantienen la metadata y configuración del clúster) y 
+                                    Mongos(que actúan como routers, dirigiendo las consultas hacia los shards apropiados).
+                                </p></li>
+
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Cliente (mongo): </span>
+                                    Es una herramienta de línea de comandos para interactuar con los servidores de MongoDB.
+                                </p></li>
+                            </ol>
+                        
+                            <p>La siguiente ilustración presenta la arquitectura de MongoDB:</p>
+                            
+                            <img src="img/MongoDBArchitecture.png" class="img-fluid tm-mb-40" alt="MongoDB Arch.">
+
+                            <p><span class="tm-color-primary">Redis</span></p>
+                            <p>Es un motor en memoria de tipología clave-valor, enfocado en velocidad extrema y simplicidad. 
+                               Es muy utilizado en aplicaciones empresariales para la gestión de sesiones y caché y en aplicaciones en tiempo real.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+
+                            <p>
+                                Su arquitectura está diseñada para ser ligera y eficiente, y cuenta con varias características que la hacen ideal para aplicaciones de 
+                                alto rendimiento, como caché, gestión de sesiones y mensajería en tiempo real. Los componentes clave de la arquitectura de Redis son:
+                            </p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Servidor Redis (Redis Server):</span>
+                                    Es el núcleo del sistema. Maneja todas las solicitudes de los clientes, realiza operaciones en la base de datos y almacena los 
+                                    datos en memoria. La persistencia opcional permite guardar los datos en disco para recuperación.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Cliente Redis (Redis Client):</span>
+                                    Los clientes envían comandos al servidor Redis. Existen bibliotecas de cliente para varios lenguajes de programación, 
+                                    lo que facilita la integración.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Replicación Maestro-Esclavo:</span>
+                                    Redis admite replicación asíncrona, donde un nodo primario replica datos a múltiples nodos secundarios (replicas). 
+                                    Esto mejora la disponibilidad y permite distribuir las cargas de lectura.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Redis Sentinel:</span>
+                                    Es un sistema de alta disponibilidad que monitorea los nodos Redis y ejecuta un failover automático en caso de fallos.
+                                    Redis Sentinel garantiza que el sistema permanezca funcional incluso ante fallas en el nodo principal.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Redis Cluster:</span>
+                                    Permite la distribución horizontal de datos mediante sharding, dividiendo las claves en 16,384 slots de hash distribuidos entre 
+                                    múltiples nodos. Cada nodo puede ser primario o réplica.
+                                </p></li>
+                            </ol>
+
+                            <p>La siguiente ilustración presenta la arquitectura de Redis:</p>
+                            
+                            <img src="img/RedisArchitecture.png" class="img-fluid tm-mb-40" alt="Redis Arch.">
+
+
+                            <p><span class="tm-color-primary">Apache Cassandra</span></p>
+                            <p> Es una solución NoSQL diseñada para manejar grandes volúmenes de datos con alta disponibilidad. 
+                                Es muy utilizada en analítica de big data e internet de las cosas (IoT).
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+
+                            <p> La arquitectura de Apache Cassandra utiliza un modelo de nodos descentralizados sin un solo punto de fallo. 
+                                Está diseñada para manejar grandes volúmenes de datos distribuidos de forma eficiente, 
+                                garantizando alta disponibilidad y escalabilidad. A continuación, se detallan sus componentes:
+                            </p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Modelo Peer-to-Peer: </span>
+                                    Cassandra utiliza una arquitectura descentralizada donde todos los nodos en un clúster tienen el mismo rol. No hay un nodo maestro, 
+                                    lo que elimina un único punto de falla. Cada nodo puede recibir solicitudes de lectura y escritura, mejorando la tolerancia a fallos 
+                                    y la escalabilidad horizontal. Los nodos se comunican entre sí usando el protocolo Gossip, que intercambia información de estado 
+                                    en intervalos regulares.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Particionamiento de Datos y Consistencia: </span>
+                                    Los datos en Cassandra se distribuyen entre los nodos utilizando una función de hash basada en un anillo lógico. 
+                                    Cada dato tiene una clave de partición que se asigna a un rango específico del anillo.
+                                    Cassandra admite diferentes niveles de consistencia, desde <span class="lato-regular-italic">eventual consistency</span> 
+                                    hasta <span class="lato-regular-italic">strong consistency</span>, configurables según las necesidades del sistema.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Replicación y Estrategias: </span>
+                                    Cassandra soporta estrategias de replicación configurables: 
+                                    <span class="lato-regular-italic">SimpleStrategy</span> (Replicación básica en un solo centro de datos) y 
+                                    <span class="lato-regular-italic">NetworkTopologyStrategy</span> (Diseñada para clústeres en múltiples centros de datos, 
+                                    asegurando replicación cruzada). La replicación proporciona redundancia para tolerancia a fallos. Por ejemplo, con un factor 
+                                    de replicación de 3, cada dato se almacena en tres nodos diferentes.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Componentes Clave: </span>
+                                    <span class="lato-regular-italic">Commit Log</span> (cada escritura se registra en este log para garantizar la durabilidad),
+                                    <span class="lato-regular-italic">SSTables o Sorted String Tables </span> (estructuras de datos inmutables en disco que contienen 
+                                    los datos persistidos),
+                                    <span class="lato-regular-italic">MemTable</span> (datos en memoria que se escriben posteriormente en SSTables),
+                                    <span class="lato-regular-italic">Bloom Filters</span> (se utilizan para optimizar las búsquedas en SSTables) y 
+                                    <span class="lato-regular-italic">Snitches</span> (determinan la topología de la red y optimizan la replicación).
+                                
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Operaciones de Lectura y Escritura</span>
+                                    <span class="lato-regular-italic">Escritura</span> (se registra en el commit log, se almacena temporalmente en la 
+                                    MemTable y finalmente se persiste en SSTables) y 
+                                    <span class="lato-regular-italic">Lectura</span> (los datos se obtienen de la MemTable o de las SSTables utilizando filtros 
+                                    Bloom para localizar rápidamente la información).
+                                </p></li>
+                            </ol>    
+
+                            <p>La siguiente ilustración presenta la arquitectura de Apache Cassandra:</p>
+                            
+                            <img src="img/CassandraArchitecture.jpg" class="img-fluid tm-mb-40" alt="Cassandra Arch.">
+
+
+                            <p><span class="tm-color-primary">Elastic Search</span></p>
+                            <p>ElasticSearch es una base de datos NoSQL orientada a documentos que utiliza Apache Lucene como núcleo para ofrecer capacidades de 
+                                búsqueda y análisis en tiempo real. Es frecuentemente utilizada en indexación y búsqueda en grandes volúmenes de datos. 
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            <p>    
+                                Presenta una condiguración de "clúster distribuido" con réplica de índices, su arquitectura distribuida permite manejar 
+                                grandes volúmenes de datos y realizar búsquedas eficientes. Sus componentes clave son:
+                            </p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Cluster: </span>
+                                    Un cluster es un conjunto de nodos que trabajan en conjunto para almacenar datos y proporcionar capacidades de búsqueda y análisis, 
+                                    todos los nodos del cluster comparten un estado común y colaboran en operaciones distribuidas.
+                                    ElasticSearch distribuye los datos mediante shards (fragmentos), que se replican para mejorar la tolerancia a fallos y la 
+                                    disponibilidad.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Nodos: </span>
+                                    Están claramente definidos según su propósito :
+                                    <span class="lato-regular-italic">Master Node</span> (administra el estado del cluster, la asignación de shards y las 
+                                    operaciones de mantenimiento del cluster),
+                                    <span class="lato-regular-italic">Data Nodes</span> (almacenan los datos y ejecutan operaciones relacionadas, como búsquedas 
+                                    y actualizaciones),
+                                    <span class="lato-regular-italic">Ingest Nodes</span> (procesan documentos antes de ser indexados, aplicando transformaciones 
+                                    mediante pipelines),
+                                    <span class="lato-regular-italic">Coordinating Nodes</span> (distribuyen las solicitudes del cliente a los nodos correspondientes y 
+                                    agregan los resultados) y
+                                    <span class="lato-regular-italic">Machine Learning Nodes -obsoletos- </span> (previamente usados para análisis de datos avanzados, ahora 
+                                    reemplazados por plugins específicos).
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Shards: </span>
+                                    ElasticSearch divide cada índice en shards primarios. Los shards secundarios (réplicas) aseguran la redundancia y mejoran 
+                                    la disponibilidad del sistema.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Comunicación: </span>
+                                    Los nodos utilizan el protocolo HTTP para interactuar con clientes externos y una capa de transporte interna para comunicarse entre sí. 
+                                    Esto garantiza una coordinación eficiente en un entorno distribuido.
+                                </p></li>
+
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Procesamiento de Consultas: </span>
+                                    las consultas se dividen y distribuyen a los shards relevantes. Los resultados se combinan para producir una respuesta agregada.
+                                </p></li>
+                            </ol>
+
+                            <p>La siguiente ilustración presenta la arquitectura de ElasticSearch 
+                                (la documentación desde donde se recuperó la imagen se encuentra en línea 
+                                <a href="https://www.altexsoft.com/blog/elasticsearch-pros-cons/" target="_blank" class="tm-color-primary">aquí</a> ):
+                            </p>
+                            
+                            <img src="img/ElasticSearchArchitecture.png" class="img-fluid tm-mb-40" alt="ElasticSearch Arch.">
+
+
+                            <h5 class="tm-color-primary tm-mb-20" id="propietarios-nosql">Motores Licenciados</h5>
+                            <p>Entre los motores propietarios o licenciados más populares de diferentes tipologías tenemos los siguientes dos:</p>
+
+                            <p><span class="tm-color-primary">DynamoDB (AWS)</span></p>
+                            <p>Amazon DynamoDB es una base de datos NoSQL que combina modelos clave-valor y documento altamente escalable, 
+                                diseñada para ofrecer baja latencia y alto rendimiento en operaciones de lectura y escritura. Es muy utilizado en 
+                                aplicaciones web y comercio electrónico (ideal para aplicaciones con alta concurrencia). 
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+                            <p>
+                                Es administrada por Amazon, cuenta con distribución automática de datos; sus componentes claves 
+                                son los siguientes: 
+                            </p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Modelo de Datos: </span>
+                                    Basado en un modelo de clave-valor o almacenamiento de tablas con índices secundarios globales (GSIs) y locales (LSIs) para acceso 
+                                    eficiente.
+                                    Las claves principales consisten en una clave de partición (Partition Key) y opcionalmente una clave de ordenamiento (Sort Key), 
+                                    lo que facilita consultas específicas y organizadas.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Distribución y Particionamiento: </span>
+                                    DynamoDB utiliza particiones para distribuir datos automáticamente en múltiples nodos. El tamaño de las particiones 
+                                    se ajusta con base en el almacenamiento y la capacidad de lectura/escritura necesarias.
+                                    Las particiones se gestionan dinámicamente y emplean un esquema de hash para distribuir la carga de manera uniforme.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Alta Disponibilidad: </span>
+                                    Los datos se replican automáticamente en múltiples zonas de disponibilidad (AZs) dentro de una región para garantizar 
+                                    tolerancia a fallos y disponibilidad continua.
+                                    DynamoDB está diseñado para manejar fallos en el hardware subyacente sin afectar a los usuarios finales.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Ejecución y Escalabilidad: </span>
+                                    Utiliza SSDs como medio de almacenamiento para un acceso rápido y eficiente.
+                                    La arquitectura de DynamoDB desacopla el rendimiento del tamaño de la tabla, eliminando la necesidad de que el 
+                                    conjunto de trabajo quepa en memoria.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Streams y Eventos:</span>
+                                    DynamoDB Streams permite la captura de cambios en tiempo real, soportando flujos de eventos y tareas como backups y análisis.
+                                </p></li>
+                            </ol>
+                            
+                            <p>La siguiente ilustración presenta la arquitectura de Amazon DynamoDB:</p>
+                            
+                            <img src="img/DynamoDBArchitecture.jpg" class="img-fluid tm-mb-40" alt="Dynamo Arch.">
+
+
+                            <p><span class="tm-color-primary">BigTable (Google)</span></p>
+
+                            <p>Google Bigtable es una base de datos NoSQL distribuida diseñada para manejar grandes volúmenes de datos, como terabytes o petabytes, 
+                                con alta disponibilidad y bajas latencias. Utiliza un sistema de columnas anchas optimizado para grandes volúmenes y es muy utilizada
+                                para analítica de datos masivos (Procesamiento de grandes volúmenes de datos de IoT, series temporales, sistemas de recomendación 
+                                o datos analíticos a escala masiva).
+                            </p>
+                            <p>
+                                Bigtable está diseñado para casos donde la consistencia fuerte no es crítica, pero la disponibilidad y escalabilidad son esenciales.
+                            </p>
+
+                            <p><span class="tm-color-primary">Arquitectura</span></p>
+
+                            <p>
+                               Presenta una configuración distribuida, diseñada para alta velocidad y latencia baja. 
+                               Los componentes claves de la arquitectura de Google BigTable son los siguientes: 
+                            </p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Tabla: </span>
+                                    Una tabla en Bigtable está compuesta por filas y columnas; cada fila está identificada de manera única por una clave de 
+                                    fila (row key).
+                                    Las columnas están agrupadas en familias de columnas y no existen físicamente hasta que se almacenan datos en ellas, cada celda 
+                                    almacena valores versionados, organizados por marcas de tiempo en orden descendente.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Column Families: </span>
+                                    Almacenan columnas relacionadas. Se configuran al momento de crear o modificar la tabla.
+                                    Las propiedades como retención de versiones y eliminación de datos antiguos se gestionan por familia de columnas.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Instancias, Clusters y Nodos: </span>
+                                    Se especifican como: 
+                                    <span class="lato-regular-italic">Instancias</span> (son representaciones virtuales que agrupan recursos y tablas),
+                                    <span class="lato-regular-italic">Clusters</span> (unidades físicas zonales que consisten en nodos) y 
+                                    <span class="lato-regular-italic">Nodos</span> (manejan operaciones de lectura y escritura y procesan datos. 
+                                    Los datos almacenados en nodos están distribuidos como tablets).
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Tablets: </span>
+                                    Fragmentos de datos de una tabla. Cada tablet contiene un rango específico de claves de fila, permitiendo particionar los datos para 
+                                    escalabilidad y paralelismo.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Separación de Almacenamiento y Computación: </span>
+                                    Bigtable separa el almacenamiento (en Google File System o Colossus) de los recursos computacionales, 
+                                    lo que permite escalar ambos de forma independiente.
+                                </p></li>
+                            </ol>
+                            
+                            <p>La siguiente ilustración presenta la arquitectura de Google BigTable:</p>
+                            
+                            <img src="img/bigtable-architecture.svg" class="img-fluid tm-mb-40" alt="BigTable Arch.">
+
+                                
+                            <hr class="tm-hr-primary tm-mb-30">
+
+                                <h4 class="tm-mb-20 tm-color-primary" id="ventajas-nosql">Ventajas</h4>
+                                <p>Algunas de las ventajas de utilizar un motor de base de datos NoSQL incluyen:</p>
+
+                                <ul class="tm-mb-30">
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Escalabilidad: </span>
+                                        Ideal para crecimiento horizontal con carga masiva.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Flexibilidad: </span>
+                                        Manejan datos diversos sin rigidez en esquemas.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Alto rendimiento: </span>
+                                        Optimizadas para lecturas/escrituras rápidas.
+                                    </p></li>
+                                    <li class="tm-color-primary"><p><span class="tm-color-primary">Resiliencia: </span>
+                                         Replicación de datos en múltiples ubicaciones para tolerancia a fallos
+                                    </p></li>
+                                </ul>
+                                
+                                    <h4 class=" tm-mb-20 tm-color-primary" id="limitaciones-nosql">Limitaciones</h4>
+                                    <p>Aunque la implementación de un motor de base de datos NoSQL ofrece varias 
+                                        ventajas, también tiene algunas limitaciones entre las que se destacan:
+                                    </p>
+
+                                    <ul class="tm-mb-30">
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Falta de estandarización: </span>
+                                            Cada motor tiene su propia sintaxis y funcionalidad.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Consistencia: </span>
+                                            Usualmente sacrifican consistencia fuerte en favor de disponibilidad y partición (teorema CAP).
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Curva de aprendizaje: </span>
+                                            Requieren conocimientos específicos según el modelo y motor.
+                                        </p></li>
+                                        <li class="tm-color-primary"><p><span class="tm-color-primary">Consultas complejas: </span>
+                                            Menos eficientes para relaciones múltiples y operaciones transaccionales estrictas.
+                                        </p></li>
+                                    </ul>    
+                                
+                                <hr class="tm-hr-primary tm-mb-20">
+                                <h4 class=" tm-color-primary">Fuentes consultadas </h4>
+                                <p><span class="tm-mb-20 tm-color-primary lato-thin-italic tm-xs-font">(incluye recursos de recuperación de imágenes)</span></p>
+                                 
+                                
+
+                                <ul style="list-style-type: none;" class="tm-category-list">
+                                    <li><a class="tm-color-primary"  href="https://www.linkedin.com/pulse/acid-vs-base-database-properties-rudra-garnaik/" target="_blank">LinkedIn-  Rudra Garnaik, 2022 - Propiedades de las bases de datos ACID vs BASE </a></li>
+                                    <li><a class="tm-color-primary"  href="https://infohub.delltechnologies.com/en-us/l/dell-apex-block-storage-for-aws-mongodb-using-kubernetes-and-powerflex-csi-1/mongodb-architecture/" target="_blank">Dell Technologies - Arquitectura MongoDB</a></li>
+                                    <li><a class="tm-color-primary"  href="https://medium.com/kanishka-madhuranga/clustering-and-failover-management-in-redis-3381fb7eaf55" target="_blank">Medium - Kanishka Madhuranga, 2019 - Administración de clustering y falla en Redis</a></li>
+                                    <li><a class="tm-color-primary"  href="https://cassandra.apache.org/_/cassandra-basics.html" target="_blank">Apache Cassandra - Conceptos básicos de Cassandra</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.altexsoft.com/blog/elasticsearch-pros-cons/" target="_blank">Altexsoft, 2023 -  Lo bueno y lo malo de Elasticsearch y Analytics Engine</a></li>
+                                    <li><a class="tm-color-primary"  href="https://cloud.google.com/bigtable/docs/overview" target="_blank">Google Cloud, 2024 - Resumen de BigTable</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.dataversity.net/nosql-databases-advantages-and-disadvantages/" target="_blank">Dataversity, 2024 - Ventajas y desventajas de las bases de datos NoSQL</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.sprinkledata.com/blogs/what-is-a-nosql-database-understanding-the-evolution-of-data-management" target="_blank">Sprinkle Data - Soham Dutta, 2024 - Qué es una base de datos NoSQL y la evolución de la gestión de datos</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.stackscale.com/es/blog/bases-de-datos-nosql/" target="_blank">Stackscale - Grupo aire, 2023 - Bases de datos NoSQL</a></li>
+                                    <li><a class="tm-color-primary"  href="https://datadrivendaily.com/overview-of-nosql-databases/" target="_blank">Data Driven Daily, 2023 - Resumen de bases de datos NoSQL: Guía integral para ingenieros de datos</a></li>
+                                    <li><a class="tm-color-primary"  href="https://www.ibm.com/topics/nosql-databases" target="_blank">IBM - ¿Qué es una base de datos NoSQL?</a></li>
+                                </ul>
+                            <hr class="tm-hr-primary tm-mb-20">
+                            <span class="d-block text-right"><a class="tm-color-primary" href="#"><span class="fas fa-step-backward tm-color-primary pr-3"></span>Rebobinar entrada</a></span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="mb-4 tm-post-title tm-color-primary">Secciones de interés</h2>
+                        <ul class="tm-mb-75 pl-5 tm-category-list">
+                            <li><a href="index.html#home-contenido" class="tm-color-primary"><span class="fas fa-home tm-color-primary pr-3"></span>Volver al inicio</a></li>
+                            <li><a href="#definicion-nosql" class="tm-color-primary">Definición</a></li>
+                            <li><a href="#caracteristicas-nosql" class="tm-color-primary">Características</a></li>
+                            <li><a href="#populares-nosql" class="tm-color-primary">BD NoSQL populares</a></li>
+                            <li><a href="#ventajas-nosql" class="tm-color-primary">Ventajas</a></li>
+                            <li><a href="#limitaciones-nosql" class="tm-color-primary">Limitaciones</a></li>
+                        </ul>
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-02.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Duis mollis diam nec ex viverra scelerisque a sit</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-05.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Integer quis lectus eget justo ullamcorper ullamcorper</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-06.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Nam lobortis nunc sed faucibus commodo</figcaption>
+                            </figure>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-4 col-4 tm-color-gray">
+                </div>
+                <div class="col-sm-12 col-md-8 col-12 tm-color-gray tm-copyright">
+                    Desarrollado por Ana María Zapata basado en la plantilla (Copyright 2020) Xtra Blog Company Co. Ltd. 
+                    <a rel="nofollow" target="_blank" href="https://templatemo.com" class="tm-external-link" >TemplateMo</a>
+                    
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>
