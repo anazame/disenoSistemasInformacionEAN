@@ -101,117 +101,247 @@ https://templatemo.com/tm-553-xtra-blog
                                 Iniciaremos con la definición del proceso de normalización para después abordar las formas normales en detalle.
                             </p>
 
-                                 Normalización de Bases de Datos y Formas Normales
-La normalización es un proceso de diseño de bases de datos que organiza los datos para reducir redundancia y mejorar la integridad. A través de este proceso, las tablas de una base de datos se dividen en subconjuntos más pequeños con relaciones definidas, asegurando que cada tabla almacene un solo tema o entidad.
-
-Definición
-La normalización implica estructurar una base de datos conforme a un conjunto de reglas (formas normales) que garantizan:
-
-La eliminación de redundancia de datos.
-La minimización de anomalías al insertar, actualizar o eliminar datos.
-Proceso de Normalización y Formas Normales
-Primera Forma Normal (1NF)
-Requisitos:
-
-Cada columna contiene un único valor atómico.
-Cada fila es única.
-Ejemplo: Una tabla que combina múltiples valores en una celda (por ejemplo, varios cursos asociados a un estudiante) se separa en filas individuales para cumplir con 1NF.
-
-Segunda Forma Normal (2NF)
-Requisitos:
-
-Cumple con 1NF.
-Toda columna no clave depende completamente de la clave primaria.
-Proceso: Si existe dependencia parcial (algunas columnas dependen de una parte de la clave compuesta), se dividen en tablas separadas.
-
-Tercera Forma Normal (3NF)
-Requisitos:
-
-Cumple con 2NF.
-No hay dependencias transitivas (columnas no clave no dependen de otras columnas no clave).
-Se eliminan estas dependencias creando tablas adicionales para almacenar datos dependientes.
-
-Forma Normal de Boyce-Codd (BCNF)
-Requisitos:
-
-Cumple con 3NF.
-Cada determinante (columna de la cual depende otra columna) es una clave candidata.
-Cuarta Forma Normal (4NF)
-Requisitos:
-
-Cumple con BCNF.
-No hay dependencias multivaluadas (una fila no debería contener más de un conjunto de valores multivaluados para una clave primaria).
-Quinta Forma Normal (5NF)
-Requisitos:
-
-Cumple con 4NF.
-Las tablas se descomponen únicamente cuando es necesario preservar dependencias de unión.
-Forma Normal Sexta (6NF)
-Aunque no está estandarizada, aborda problemas adicionales relacionados con bases de datos temporales y especificaciones avanzadas.
-
-Ventajas de la Normalización
-Reducción de Redundancia: Los datos duplicados se eliminan.
-Mejora en Consistencia: Los datos se actualizan en un único lugar, minimizando errores.
-Ahorro de Espacio: Menor duplicación reduce el uso de almacenamiento.
-Consulta Más Eficiente: Las estructuras más simples son más rápidas para procesar.
-Facilidad de Mantenimiento: Las relaciones entre datos están mejor definidas, lo que simplifica el mantenimiento.
-Limitaciones de la Normalización
-Complejidad: Puede requerir más tablas y consultas complejas.
-Rendimiento: La descomposición en múltiples tablas puede aumentar el tiempo de respuesta para consultas complejas.
-Sobrecarga Inicial: Requiere planeación y diseño cuidadoso al inicio.
+                            <h4 class="tm-mb-20 tm-color-primary" id="definicion-normalizacion">Definición </h4>
 
                             <p>
-                                Duis pretium efficitur nunc. Mauris vehicula nibh nisi. Curabitur gravida neque
-                                dignissim, aliquet nulla sed, condimentum nulla. Pellentesque id venenatis
-                                quam, id cursus velit. Fusce semper tortor ac metus iaculis varius. Praesent
-                                aliquam ex vel lectus ornare tristique. Nunc et eros quis enim feugiat tincidunt
-                                et vitae dui.
+                                La normalización es un proceso de diseño de bases de datos que organiza los datos para reducir redundancia y mejorar la integridad. 
+                                A través de este proceso, las tablas de una base de datos se dividen en subconjuntos más pequeños con relaciones definidas, 
+                                asegurando que cada tabla almacene un solo tema o entidad.
+                                La normalización implica estructurar una base de datos conforme a un conjunto de reglas (formas normales) que garantizan:
                             </p>
-                            <span class="d-block text-right tm-color-primary">Creative . Design . Business</span>
+                            <ul>
+                                <li class="tm-color-primary"><p>Eliminación de redundancia de datos.</p></li> 
+                                <li class="tm-color-primary"><p>La minimización de anomalías al insertar, actualizar o eliminar datos.</p></li>
+
+                            </ul>
+
+                            <p>Una vez definido el concepto de normalización continuamos con la definición de las formas
+                            normales hallado al confrontar diversas fuentes en línea (este apartado responde a la pregunta "¿Qué es la normalización de base de datos?").
+                            </p>
+                            
+                            <h4 class="tm-mb-20 tm-color-primary" id="formas-normalizacion">Proceso de normalización y formas normales</h4>
+
+                            <p>El proceso de normalización consiste en aplicar reglas a un conjunto de datos. Cada una de estas reglas transforma los datos 
+                                en una estructura determinada, denominada <span class="lato-bold">forma normal</span>.
+                             </p>   
+                             <p>       
+                                Hay tres formas normales principales que debe tener en cuenta (en realidad, hay seis formas normales en total, 
+                                pero las tres primeras son las más comunes).
+                             </p>  
+                             <p class="tm-mb-30">
+                                Cuando se aplica la primera regla, los datos están en <span class="lato-bold">primera forma normal</span>. 
+                                A continuación, se aplica la segunda regla y los datos están en <span class="lato-bold">segunda forma normal</span>. 
+                                Cuando se aplica la tercera regla, los datos están en <span class="lato-bold">tercera forma normal</span>.
+                                Las formas normales cuarta y quinta se obtienen a partir de sus reglas específicas (este apartado responde a la pregunta 
+                                "¿Qué formas normales existen?").
+                            </p>
+                            
+                            <h5 class="tm-mb-20 tm-color-primary">Primera forma Normal (1NF)</h5>
+
+                            <p>
+                                Las reglas para la primera forma normal son las siguientes:
+                            </p>
+                            <ul>
+                                <li class="tm-color-primary"><p>Cada columna contiene un único valor atómico.</p></li>
+                                <li class="tm-color-primary"><p>Cada fila es única.</p></li>
+                             </ul>   
+                             <p>
+                                <span class="tm-color-primary">Ejemplo:</span> Una tabla que combina múltiples valores en una celda (por ejemplo, varios 
+                                cursos asociados a un estudiante) se separa en filas individuales para cumplir con 1NF.    
+                             </p>   
+
+                             <p>La siguiente ilustración muestra la primera forma normal para la entidad estudiante:</p>
+
+                             <img src="img/Normalisation-ERD-Examples-1NF.png" class="img-fluid tm-mb-30" alt="Primera forma normal">
+
+
+                            <h5 class="tm-mb-20 tm-color-primary">Segunda forma Normal (2NF)</h5>
+
+                            <p>
+                                Las reglas para la segunda forma normal son las siguientes:
+                            </p>
+                            <ul>
+                                <li class="tm-color-primary"><p>Cumple con 1NF.</p></li>
+                                <li class="tm-color-primary"><p>Toda columna no clave depende completamente de la clave primaria.</p></li>
+                             </ul>   
+                             <p>
+                                El proceso a seguir en la segunda forma normal consiste en determinar si existe dependencia parcial (algunas columnas dependen de una 
+                                parte de la clave compuesta), si es así; se dividen en tablas separadas.
+                             </p> 
+                             
+                             <p>El diagrama más abajo muestra la segunda forma normal para la entidad estudiante y las tablas relacionadas profesor, curso y asignatura:</p>
+
+                             <img src="img/Normalisation-ERD-Examples-2NF.png" class="img-fluid tm-mb-30" alt="Segunda forma normal">
+
+                            <h5 class="tm-mb-20 tm-color-primary">Tercera forma Normal (3NF)</h5>
+
+                            <p>
+                                Las reglas para la tercera forma normal son las siguientes:
+                            </p>
+                            <ul>
+                                <li class="tm-color-primary"><p>Cumple con 2NF.</p></li>
+                                <li class="tm-color-primary"><p>No hay dependencias transitivas (columnas no clave no dependen de otras columnas no clave).</p></li>
+                             </ul>  
+                             <p>
+                                El proceso a seguir en la tercera forma normal consiste en eliminar dependencias transitivas creando tablas adicionales 
+                                para almacenar datos dependientes.
+                             </p>     
+
+                             <p>El diagrama relacional que se ilustra más abajo presenta la tercera forma normal para el ejemplo de estudiante, 
+                                curso, asignatura, profesor y dirección:</p>
+
+                                <img src="img/Normalisation-ERD-Examples-3NF.png" class="img-fluid tm-mb-30" alt="Segunda forma normal">
+
+                             <h5 class="tm-mb-20 tm-color-primary">Forma Normal de Boyce-Codd (BCNF)</h5>
+
+                             <p>
+                                Las reglas para la forma normal de Boyce-Codd son las siguientes:
+                            </p>
+
+                            <ul>
+                                <li class="tm-color-primary"><p>Cumple con 3NF.</p></li>
+                                <li class="tm-color-primary"><p>Cada determinante (columna de la cual depende otra columna) es una clave candidata.</p></li>
+                             </ul>  
+                            
+                            <h5 class="tm-mb-20 tm-color-primary">Cuarta forma Normal (4NF)</h5>
+
+                            <p>
+                                Las reglas para la cuarta forma normal son las siguientes:
+                            </p>
+
+                            <ul>
+                                <li class="tm-color-primary"><p>Cumple con BCNF.</p></li>
+                                <li class="tm-color-primary"><p>No hay dependencias multivaluadas (una fila no debería contener más de un conjunto de valores 
+                                    multivaluados para una clave primaria).</p></li>
+                             </ul>  
+
+                             <p>El diagrama relacional que se ilustra más abajo presenta la cuarta forma normal para el ejemplo de estudiante, 
+                                curso, asignatura, profesor y dirección desagregando la dependencia multivaluada para profesor, estudiante y código de dirección: </p>
+
+                                <img src="img/Normalisation-ERD-Examples-4NF.png" class="img-fluid tm-mb-30" alt="Segunda forma normal">
+
+                            <h5 class="tm-mb-20 tm-color-primary">Quinta forma Normal (5NF)</h5>
+
+                            <p>
+                                Las reglas para la quinta forma normal son las siguientes:
+                            </p>
+
+                            <ul>
+                                <li class="tm-color-primary"><p>Cumple con 4NF.</p></li>
+                                <li class="tm-color-primary"><p>Las tablas se descomponen únicamente cuando es necesario preservar dependencias de unión.</p></li>
+                             </ul>
+                            
+                            <h5 class="tm-mb-20 tm-color-primary">Sexta forma Normal (6NF)</h5>
+
+                            <p>
+                                Aunque no está estandarizada, aborda problemas adicionales relacionados con bases de datos temporales y especificaciones avanzadas.
+                            </p>
+
+                            <p>Un recurso que se considera relevante para ampliar la comprensión del proceso de normalización de 
+                                bases de datos es el siguiente:
+                            </p>
+
+                            <div class="col-12 tm-mb-40">
+                                <hr class="tm-hr-primary tm-mb-30">
+                                    <embed src="https://www.youtube-nocookie.com/embed/GFQaEYEc8_8" 
+                                    width="100%" height="300px">							  
+                            </div>
+                        
+                            <hr class="tm-hr-primary tm-mb-20">    
+
+                        <h4 class="tm-mb-30 tm-color-primary" id="ventajas-normalizacion">Ventajas de la Normalización</h4>
+
+                        <p>Algunas de las diversas ventajas de implementar un proceso de normalización en el diseño de sistemas de información incluyen:</p>    
+                        <ol class="tm-mb-30">
+                            <li class="tm-color-primary"><p><span class="tm-color-primary">Reducción de Redundancia: </span>
+                                Los datos duplicados se eliminan.
+                            </p></li>
+                            <li class="tm-color-primary"><p><span class="tm-color-primary">Mejora en Consistencia: </span>
+                                Los datos se actualizan en un único lugar, minimizando errores.
+                            </p></li>
+                            <li class="tm-color-primary"><p><span class="tm-color-primary">Ahorro de Espacio:</span>
+                                Menor duplicación reduce el uso de almacenamiento.
+                            </p></li>
+                            <li class="tm-color-primary"><p><span class="tm-color-primary">Consulta Más Eficiente: </span>
+                                Las estructuras más simples son más rápidas para procesar.
+                            </p></li>
+                            <li class="tm-color-primary"><p><span class="tm-color-primary">Facilidad de Mantenimiento:</span>
+                                    Las relaciones entre datos están mejor definidas, lo que simplifica el mantenimiento.
+                            </p></li>    
+                        </ol>
+
+                        <h4 class="tm-mb-30 tm-color-primary" id="limitaciones-normalizacion"> Limitaciones de la Normalización </h4>
+
+                            <p>Existen pocas limitaciones a considerar al implementar un proceso de normalización:</p>
+
+                            <ol>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Complejidad: </span>
+                                    Puede requerir más tablas y consultas complejas.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Rendimiento: </span>
+                                    La descomposición en múltiples tablas puede aumentar el tiempo de respuesta para consultas complejas.
+                                </p></li>
+                                <li class="tm-color-primary"><p><span class="tm-color-primary">Sobrecarga Inicial: </span>
+                                    Requiere planeación y diseño cuidadoso al inicio.
+                                </p></li>
+                            </ol>
+ 
+                            <hr class="tm-hr-primary tm-mb-20">
+ 
+                            <h4 class="tm-color-primary">Fuentes consultadas</h4>
+                            <p><span class="tm-mb-20 tm-color-primary lato-thin-italic tm-xs-font">(incluye recursos de recuperación de imágenes)</span></p>
+
+                            <ul style="list-style-type: none;" class="tm-category-list">
+                                <li><a class="tm-color-primary"  href="https://www.databasestar.com/database-normalization/" target="_blank"> Database Star - Normalización de bases de datos: Una guía paso a paso con ejemplos</a></li>
+                                <li><a class="tm-color-primary"  href="https://www.analyticsvidhya.com/blog/2022/08/database-normalization-a-step-by-step-guide-with-examples/" target="_blank"> Analytics Vidhya, Sathish, 2024 - Normalización: Guía paso a paso con ejemplos</a></li>
+                                <li><a class="tm-color-primary"  href="https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/" target="_blank"> Free Code Camp - Chris Kolade, 2023 - Normalización de bases de datos formas normales 1,2,3 con ejemplos de tablas</a></li>
+                                <li><a class="tm-color-primary"  href="https://www.guru99.com/database-normalization.html" target="_blank"> Guru99- Marcus Allen, 2024 - Normalización de DBMS : Ejemplo de base de datos en 1NF, 2NF, 3NF </a></li>
+                                <li><a class="tm-color-primary"  href="https://hackr.io/blog/dbms-normalization" target="_blank"> Hackr.io- Aman Goel, 2023 - Normalización en DBMS: 1NF, 2NF, 3NF, y BCNF [Ejemplos] </a></li>
+                                
+                            </ul>
+                            
+                            <hr class="tm-hr-primary tm-mb-20">
+                            <span class="d-block text-right"><a class="tm-color-primary" href="#"><span class="fas fa-step-backward tm-color-primary pr-3"></span>Rebobinar entrada</a></span>
                         </div>
                     </div>
                 </div>
                 <aside class="col-lg-4 tm-aside-col">
                     <div class="tm-post-sidebar">
                         <hr class="mb-3 tm-hr-primary">
-                        <h2 class="mb-4 tm-post-title tm-color-primary">Categories</h2>
+                        <h2 class="mb-4 tm-post-title tm-color-primary">Secciones de interés</h2>
                         <ul class="tm-mb-75 pl-5 tm-category-list">
-                            <li><a href="#" class="tm-color-primary">Visual Designs</a></li>
-                            <li><a href="#" class="tm-color-primary">Travel Events</a></li>
-                            <li><a href="#" class="tm-color-primary">Web Development</a></li>
-                            <li><a href="#" class="tm-color-primary">Video and Audio</a></li>
-                            <li><a href="#" class="tm-color-primary">Etiam auctor ac arcu</a></li>
-                            <li><a href="#" class="tm-color-primary">Sed im justo diam</a></li>
+                            <li><a href="index.html#home-contenido" class="tm-color-primary"><span class="fas fa-home tm-color-primary pr-3"></span>Volver al inicio</a></li>
+                            <li><a href="#definicion-normalizacion" class="tm-color-primary">Definición</a></li>
+                            <li><a href="#formas-normalizacion" class="tm-color-primary">Formas normales</a></li>
+                            <li><a href="#ventajas-normalizacion" class="tm-color-primary">Ventajas</a></li>
+                            <li><a href="#limitaciones-normalizacion" class="tm-color-primary">Limitaciones</a></li>
                         </ul>
                         <hr class="mb-3 tm-hr-primary">
                         <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
-                        <a href="#" class="d-block tm-mb-40">
+                        <a href="dbms.html" class="d-block tm-mb-40">
                             <figure>
-                                <img src="img/img-02.jpg" alt="Image" class="mb-3 img-fluid">
-                                <figcaption class="tm-color-primary">Duis mollis diam nec ex viverra scelerisque a sit</figcaption>
+                                <img src="img/best-databases-news.png" alt="Image" class="mb-2 img-fluid">
+                                <figcaption class="tm-color-primary">¿Qué es un motor de bases de datos?
+                                </figcaption>
                             </figure>
                         </a>
-                        <a href="#" class="d-block tm-mb-40">
+                        <a href="bd-relacional.html" class="d-block tm-mb-40">
                             <figure>
-                                <img src="img/img-05.jpg" alt="Image" class="mb-3 img-fluid">
-                                <figcaption class="tm-color-primary">Integer quis lectus eget justo ullamcorper ullamcorper</figcaption>
-                            </figure>
-                        </a>
-                        <a href="#" class="d-block tm-mb-40">
-                            <figure>
-                                <img src="img/img-06.jpg" alt="Image" class="mb-3 img-fluid">
-                                <figcaption class="tm-color-primary">Nam lobortis nunc sed faucibus commodo</figcaption>
+                                <img src="img/bases-datos-relacional.png" alt="Image" class="mb-2 img-fluid">
+                                <figcaption class="tm-color-primary">Bases de datos relacionales, características y actualidad
+                                </figcaption>
                             </figure>
                         </a>
                     </div>                    
                 </aside>
             </div>
             <footer class="row tm-row">
-                <div class="col-md-6 col-12 tm-color-gray">
-                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                <div class="col-md-4 col-4 tm-color-gray">
                 </div>
-                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
-                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                <div class="col-sm-12 col-md-8 col-12 tm-color-gray tm-copyright">
+                    Desarrollado por Ana María Zapata basado en la plantilla (Copyright 2020) Xtra Blog Company Co. Ltd. 
+                    <a rel="nofollow" target="_blank" href="https://templatemo.com" class="tm-external-link" >TemplateMo</a>
+                    
                 </div>
             </footer>
         </main>

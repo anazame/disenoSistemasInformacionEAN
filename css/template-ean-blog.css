@@ -90,6 +90,12 @@ hr {
     justify-content: space-between;
 }
 
+.tm-row-news {
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+
 .tm-nav { margin-bottom: 100px; }
 
 .tm-nav-item {
